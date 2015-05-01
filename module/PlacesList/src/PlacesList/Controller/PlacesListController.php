@@ -17,9 +17,9 @@ namespace PlacesList\Controller;
 	 
 	  public function indexAction()
      {
-         return new ViewModel(array(
+         return new array(
              'posts' => $this->placesListService->findAllPlaces()
-         ));
+         );
      }
  }
  

@@ -8,7 +8,6 @@
  */
 
 return array(
-	return array(
      'db' => array(
          'driver'         => 'Pdo',
          'username'       => 'bimbiactlive',  //edit this

@@ -1,14 +1,14 @@
 <?php
- // Filename: /module/PlacesList/src/PlacesList/Mapper/PlacesListMapperInterface.php
- namespace PlacesList\Mapper;
+ // Filename: /module/Places/src/Places/Mapper/PlacesMapperInterface.php
+ namespace Places\Mapper;
 
- use PlacesList\Model\PlacesListInterface;
+ use Places\Model\PlacesInterface;
 
- interface PlacesListMapperInterface
+ interface PlacesMapperInterface
  {
      /**
       * @param int|string $id
-      * @return PlacesListInterface
+      * @return PlacesInterface
       * @throws \InvalidArgumentException
       */
      public function find($id);

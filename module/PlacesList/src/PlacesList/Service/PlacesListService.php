@@ -1,9 +1,9 @@
 <?php
- // Filename: /module/PlacesList/src/PlacesList/Service/PlacesListService.php
- namespace PlacesList\Service;
- use PlacesList\Model\PlacesList;
+ // Filename: /module/Places/src/Places/Service/PlacesService.php
+ namespace Places\Service;
+ use Places\Model\Places;
  
- class PlacesListService implements PlacesListServiceInterface
+ class PlacesService implements PlacesServiceInterface
  {	
 	 protected $data = array(
          array(
@@ -54,10 +54,10 @@
       */
      public function findPlace($id)
      {
-         // TODO: Implement findPost() method.
+         // TODO: Implement findPlace() method.
 		 $postData = $this->data[$id];
 
-         $model = new PlacesList();
+         $model = new Places();
          $model->setId($postData['id']);
          $model->setTitle($postData['title']);
          $model->setText($postData['text']);

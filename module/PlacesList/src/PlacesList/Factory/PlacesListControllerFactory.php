@@ -1,12 +1,12 @@
 <?php
- // Filename: /module/PlacesList/src/PlacesList/Factory/PlacesListControllerFactory.php
- namespace PlacesList\Factory;
+ // Filename: /module/Places/src/Places/Factory/PlacesControllerFactory.php
+ namespace Places\Factory;
 
- use PlacesList\Controller\PlacesListController;
+ use Places\Controller\PlacesController;
  use Zend\ServiceManager\FactoryInterface;
  use Zend\ServiceManager\ServiceLocatorInterface;
 
- class PlacesListControllerFactory implements FactoryInterface
+ class PlacesControllerFactory implements FactoryInterface
  {
      /**
       * Create service
@@ -18,8 +18,8 @@
      public function createService(ServiceLocatorInterface $serviceLocator)
      {
          $realServiceLocator = $serviceLocator->getServiceLocator();
-         $placesListService        = $realServiceLocator->get('PlacesList\Service\PlacesListServiceInterface');
+         $placesService        = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
 
-         return new PlacesListController($placesListService);
+         return new PlacesController($placesService);
      }
  }

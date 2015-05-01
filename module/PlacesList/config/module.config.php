@@ -20,15 +20,15 @@ return array(
 	 
 	'service_manager' => array(
          'factories' => array(
-			 'PlacesList\Mapper\PlacesListMapperInterface'   => 'PlacesList\Factory\ZendDbSqlMapperFactory',
-             'PlacesList\Service\PlacesListServiceInterface' => 'PlacesList\Factory\PlacesListServiceFactory',
+			 'Places\Mapper\PlacesMapperInterface'   => 'Places\Factory\ZendDbSqlMapperFactory',
+             'Places\Service\PlacesServiceInterface' => 'Places\Factory\PlacesServiceFactory',
 			 'Zend\Db\Adapter\Adapter'           => 'Zend\Db\Adapter\AdapterServiceFactory',
          )
      ),
 	 
      'controllers' => array(
          'factories' => array(
-             'PlacesList\Controller\PlacesList' => 'PlacesList\Factory\PlacesListControllerFactory',
+             'Places\Controller\Places' => 'Places\Factory\PlacesControllerFactory',
          ),
      ),
 	 
@@ -36,8 +36,8 @@ return array(
 	 'router' => array(
 		 // Open configuration for all possible routes
          'routes' => array(
-			// Define a new route called "placesList"
-             'placesList' => array(
+			// Define a new route called "places"
+             'places' => array(
 				// Define the routes type. The segment route allows us to specify placeholders in the URL pattern (route) that will be mapped to named parameters in the matched route.
                  'type'    => 'literal',
 				 // Configure the route itself
@@ -48,7 +48,7 @@ return array(
 					  'route'    => '/blog',
                      // Define default controller and action to be called when this route is matched
                      'defaults' => array(
-                         'controller' => 'PlacesList\Controller\PlacesList',
+                         'controller' => 'Places\Controller\Places',
                          'action'     => 'index',
                      ),
                  ),

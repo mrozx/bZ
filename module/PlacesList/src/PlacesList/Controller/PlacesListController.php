@@ -1,24 +1,24 @@
 <?php 
 	
-namespace PlacesList\Controller;
+namespace Places\Controller;
 
- use PlacesList\Service\PlacesListServiceInterface;
+ use Places\Service\PlacesServiceInterface;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
- class PlacesListController extends AbstractActionController
+ class PlacesController extends AbstractActionController
  {
-    protected $placesListService;
+    protected $placesService;
 
-     public function __construct(PlacesListServiceInterface $placesListService)
+     public function __construct(PlacesServiceInterface $placesService)
      {
-         $this->placesListService = $placesListService;
+         $this->placesService = $placesService;
      }
 	 
 	  public function indexAction()
      {
          return array(
-             'posts' => $this->placesListService->findAllPlaces()
+             'posts' => $this->placesService->findAllPlaces()
          );
      }
  }

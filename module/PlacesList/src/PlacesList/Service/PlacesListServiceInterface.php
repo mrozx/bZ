@@ -1,24 +1,24 @@
 <?php
- // Filename: /module/PlacesList/src/PlacesList/Service/PostServiceInterface.php
- namespace PlacesList\Service;
+ // Filename: /module/Places/src/Places/Service/PostServiceInterface.php
+ namespace Places\Service;
 
- use PlacesList\Model\PlacesListInterface;
+ use Places\Model\PlacesInterface;
 
- interface PlacesListServiceInterface
+ interface PlacesServiceInterface
  {
      /**
-      * Should return a set of all PlacesList posts that we can iterate over. Single entries of the array are supposed to be
-      * implementing \PlacesList\Model\PostInterface
+      * Should return a set of all Places posts that we can iterate over. Single entries of the array are supposed to be
+      * implementing \Places\Model\PostInterface
       *
-      * @return array|PlacesListInterface[]
+      * @return array|PlacesInterface[]
       */
      public function findAllPlaces();
 
      /**
-      * Should return a single PlacesList post
+      * Should return a single Places post
       *
       * @param  int $id Identifier of the Post that should be returned
-      * @return PlacesListInterface
+      * @return PlacesInterface
       */
      public function findPlace($id);
  }

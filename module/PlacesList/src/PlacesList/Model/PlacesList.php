@@ -1,8 +1,8 @@
 <?php
- // Filename: /module/PlacesList/src/PlacesList/Model/PlacesList.php
- namespace PlacesList\Model;
+ // Filename: /module/Places/src/Places/Model/Places.php
+ namespace Places\Model;
 
- class PlacesList implements PlacesListInterface
+ class Places implements PlacesInterface
  {
      /**
       * @var int

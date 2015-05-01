@@ -1,11 +1,11 @@
 <?php
- // Filename: /module/PlacesList/src/PlacesList/Mapper/ZendDbSqlMapper.php
- namespace PlacesList\Mapper;
+ // Filename: /module/Places/src/Places/Mapper/ZendDbSqlMapper.php
+ namespace Places\Mapper;
 
- use PlacesList\Model\PlacesListInterface;
+ use Places\Model\PlacesInterface;
  use Zend\Db\Adapter\AdapterInterface;
 
- class ZendDbSqlMapper implements PlacesListMapperInterface
+ class ZendDbSqlMapper implements PlacesMapperInterface
  {
      /**
       * @var \Zend\Db\Adapter\AdapterInterface
@@ -23,7 +23,7 @@
      /**
       * @param int|string $id
       *
-      * @return PlacesListInterface
+      * @return PlacesInterface
       * @throws \InvalidArgumentException
       */
      public function find($id)
@@ -31,7 +31,7 @@
      }
 
      /**
-      * @return array|PlacesListInterface[]
+      * @return array|PlacesInterface[]
       */
      public function findAll()
      {

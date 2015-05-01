@@ -46,15 +46,20 @@ return array(
 					// the route is ``/album[/:action][/:id]`` which will match any URL that starts with /album. 
 					//The next segment will be an optional action name, 
 					//and then finally the next segment will be mapped to an optional id. 
-                     'route'    => '/placesList[/:action][/:id]',
+                    /*  'route'    => '/placesList[/:action][/:id]',
                      'constraints' => array(
                          'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
                          'id'     => '[0-9]+',
-                     ),
-					 // Define default controller and action to be called when this route is matched
+                     ), */
+					  'route'    => '/blog',
+                     // Define default controller and action to be called when this route is matched
                      'defaults' => array(
                          'controller' => 'PlacesList\Controller\PlacesList',
                          'action'     => 'index',
+					 // Define default controller and action to be called when this route is matched
+                    /*  'defaults' => array(
+                         'controller' => 'PlacesList\Controller\PlacesList',
+                         'action'     => 'index', */
                      ),
                  ),
              ),

@@ -40,7 +40,7 @@ return array(
 			// Define a new route called "placesList"
              'placesList' => array(
 				// Define the routes type. The segment route allows us to specify placeholders in the URL pattern (route) that will be mapped to named parameters in the matched route.
-                 'type'    => 'segment',
+                 'type'    => 'literal',
 				 // Configure the route itself
                  'options' => array(
 					// the route is ``/album[/:action][/:id]`` which will match any URL that starts with /album. 

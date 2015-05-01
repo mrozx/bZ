@@ -2,9 +2,9 @@
 
 <?php foreach ($this->posts as $post): ?>
  <article>
-     <h1 id="post<?php $post->getId() ?>"><?php $post->getTitle() ?></h1>
+     <h1 id="post<?= $post->getId() ?>"><?= $post->getTitle() ?></h1>
      <p>
-         <?php $post->getText() ?>
+         <?= $post->getText() ?>
      </p>
  </article>
- <?php endforeach; ?>
+ <?php endforeach ?>

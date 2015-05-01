@@ -17,7 +17,7 @@ namespace PlacesList\Controller;
 	 
 	  public function indexAction()
      {
-         return new array(
+         return array(
              'posts' => $this->placesListService->findAllPlaces()
          );
      }

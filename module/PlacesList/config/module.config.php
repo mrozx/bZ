@@ -21,8 +21,8 @@ return array(
 	'service_manager' => array(
          'factories' => array(
 			 'PlacesList\Mapper\PlacesListMapperInterface'   => 'PlacesList\Factory\ZendDbSqlMapperFactory',
-             'PlacesList\Service\PlacesListServiceInterface' => 'PlacesList\Service\PlacesListServiceFactory',
-			 'Zend\Db\Adapter\Adapter'           => 'Zend\Db\Adapter\AdapterServiceFactory'
+             'PlacesList\Service\PlacesListServiceInterface' => 'PlacesList\Factory\PlacesListServiceFactory',
+			 'Zend\Db\Adapter\Adapter'           => 'Zend\Db\Adapter\AdapterServiceFactory',
          )
      ),
 	 

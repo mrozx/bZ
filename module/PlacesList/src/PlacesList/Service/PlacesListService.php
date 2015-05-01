@@ -30,7 +30,7 @@
      /**
       * {@inheritDoc}
       */
-     public function findPlaces($id)
+     public function findPlace($id)
      {
          // TODO: Implement findPost() method.
 		 return $this->PlacesListMapper->find($id);

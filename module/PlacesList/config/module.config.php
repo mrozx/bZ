@@ -28,7 +28,7 @@ return array(
 	 
      'controllers' => array(
          'factories' => array(
-             'PlacesList\Controller\PlacesList' => 'PlacesList\Factory\PlacesListFactory',
+             'PlacesList\Controller\PlacesList' => 'PlacesList\Factory\PlacesListControllerFactory',
          ),
      ),
 	 

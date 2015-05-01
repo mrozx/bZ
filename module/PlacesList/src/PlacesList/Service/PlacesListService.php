@@ -42,7 +42,7 @@
 		 $allPosts = array();
 
          foreach ($this->data as $index => $post) {
-             $allPosts[] = $this->findPost($index);
+             $allPosts[] = $this->findPlace($index);
          }
 
          return $allPosts;

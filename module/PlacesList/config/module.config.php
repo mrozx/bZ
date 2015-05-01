@@ -58,9 +58,7 @@ return array(
 	 
      'view_manager' => array(
          'template_path_stack' => array(
-		  'placesList' => array(
-				__DIR__ . '/../view',
-				),
+		  'placesList' => __DIR__ . '/../view',
          ),
      ),
 	 

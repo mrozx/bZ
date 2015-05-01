@@ -2,7 +2,7 @@
  // Filename: /module/PlacesList/src/PlacesList/Service/PostServiceInterface.php
  namespace PlacesList\Service;
 
- use PlacesList\Model\PostInterface;
+ use PlacesList\Model\PlacesListInterface;
 
  interface PlacesListServiceInterface
  {

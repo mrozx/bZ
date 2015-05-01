@@ -7,14 +7,14 @@
 	/**
       * @var \PlacesList\Mapper\PlacesListMapperInterface
       */
-     protected $PlacesListMapper;
+     protected $placesListMapper;
 	
 	/**
-      * @param PostMapperInterface $PlacesListMapper
+      * @param PostMapperInterface $placesListMapper
       */
-     public function __construct(PlacesListMapperInterface $PlacesListMapper)
+     public function __construct(PlacesListMapperInterface $placesListMapper)
      {
-         $this->PlacesListMapper = $PlacesListMapper;
+         $this->placesListMapper = $placesListMapper;
      }
 
 	 

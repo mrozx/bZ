@@ -20,7 +20,7 @@ return array(
 	 
 	'service_manager' => array(
          'factories' => array(
-			 'PlacesList\Mapper\PlacesListMapperInterface'   => 'PlacesList\Factory\ZendDbSqlMapperFactory',
+			 //'PlacesList\Mapper\PlacesListMapperInterface'   => 'PlacesList\Factory\ZendDbSqlMapperFactory',
              'PlacesList\Service\PlacesListServiceInterface' => 'PlacesList\Factory\PlacesListServiceFactory',
 			 'Zend\Db\Adapter\Adapter'           => 'Zend\Db\Adapter\AdapterServiceFactory',
          )
@@ -37,7 +37,7 @@ return array(
 		 // Open configuration for all possible routes
          'routes' => array(
 			// Define a new route called "placesList"
-             'posts' => array(
+             'placesList' => array(
 				// Define the routes type. The segment route allows us to specify placeholders in the URL pattern (route) that will be mapped to named parameters in the matched route.
                  'type'    => 'literal',
 				 // Configure the route itself
@@ -58,7 +58,7 @@ return array(
 	 
      'view_manager' => array(
          'template_path_stack' => array(
-             'placesList' => __DIR__ . '/../view',
+             __DIR__ . '/../view',
          ),
      ),
 	 

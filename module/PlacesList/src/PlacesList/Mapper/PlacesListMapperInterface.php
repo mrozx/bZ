@@ -8,7 +8,7 @@
  {
      /**
       * @param int|string $id
-      * @return PostInterface
+      * @return PlacesListInterface
       * @throws \InvalidArgumentException
       */
      public function find($id);

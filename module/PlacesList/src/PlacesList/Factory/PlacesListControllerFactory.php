@@ -2,7 +2,7 @@
  // Filename: /module/PlacesList/src/PlacesList/Factory/PlacesListControllerFactory.php
  namespace PlacesList\Factory;
 
- use PlacesList\Controller\ListController;
+ use PlacesList\Controller\PlacesListController;
  use Zend\ServiceManager\FactoryInterface;
  use Zend\ServiceManager\ServiceLocatorInterface;
 

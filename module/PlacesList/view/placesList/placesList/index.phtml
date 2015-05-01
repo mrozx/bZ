@@ -1,0 +1,10 @@
+<h1>dasas</h1>
+
+<?php foreach ($this->posts as $post): ?>
+ <article>
+     <h1 id="post<?php $post->getId() ?>"><?php $post->getTitle() ?></h1>
+     <p>
+         <?php $post->getText() ?>
+     </p>
+ </article>
+ <?php endforeach; ?>

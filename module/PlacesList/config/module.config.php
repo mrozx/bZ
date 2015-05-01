@@ -20,7 +20,7 @@ return array(
 	 
 	'service_manager' => array(
          'factories' => array(
-			 //'PlacesList\Mapper\PlacesListMapperInterface'   => 'PlacesList\Factory\ZendDbSqlMapperFactory',
+			 'PlacesList\Mapper\PlacesListMapperInterface'   => 'PlacesList\Factory\ZendDbSqlMapperFactory',
              'PlacesList\Service\PlacesListServiceInterface' => 'PlacesList\Factory\PlacesListServiceFactory',
 			 'Zend\Db\Adapter\Adapter'           => 'Zend\Db\Adapter\AdapterServiceFactory',
          )
@@ -58,7 +58,7 @@ return array(
 	 
      'view_manager' => array(
          'template_path_stack' => array(
-             __DIR__ . '/../view',
+				__DIR__ . '/view',
          ),
      ),
 	 

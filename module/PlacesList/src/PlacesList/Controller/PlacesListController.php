@@ -4,6 +4,7 @@ namespace PlacesList\Controller;
 
  use PlacesList\Service\PlacesListServiceInterface;
  use Zend\Mvc\Controller\AbstractActionController;
+ use Zend\View\Model\ViewModel;
 
  class PlacesListController extends AbstractActionController
  {

@@ -1,7 +1,8 @@
 <?php
  // Filename: /module/PlacesList/src/PlacesList/Service/PlacesListService.php
  namespace PlacesList\Service;
-
+ use PlacesList\Model\PlacesList;
+ 
  class PlacesListService implements PlacesListServiceInterface
  {	
 	 protected $data = array(

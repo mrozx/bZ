@@ -25,7 +25,7 @@
      public function findAllPlaces()
      {
          // TODO: Implement findAllPosts() method.
-		//return $this->placesMapper->findAll();
+		return $this->placesMapper->findAll();
      }
 
      /**
@@ -34,6 +34,6 @@
      public function findPlace($id)
      {
          // TODO: Implement findPlace() method.
-		  //return $this->placesMapper->find($id);
+		  return $this->placesMapper->find($id);
      }
  }

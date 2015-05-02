@@ -20,7 +20,7 @@ return array(
 	 
 	'service_manager' => array(
          'factories' => array(
-			// 'Places\Mapper\PlacesMapperInterface'   => 'Places\Factory\ZendDbSqlMapperFactory',
+			 'Places\Mapper\PlacesMapperInterface'   => 'Places\Factory\ZendDbSqlMapperFactory',
              'Places\Service\PlacesServiceInterface' => 'Places\Factory\PlacesServiceFactory',
 			 'Zend\Db\Adapter\Adapter'           => 'Zend\Db\Adapter\AdapterServiceFactory',
          )

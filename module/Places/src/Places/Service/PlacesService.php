@@ -8,15 +8,15 @@
 	   /**
       * @var \Places\Mapper\PlacesMapperInterface
       */
-     // protected $placesMapper;
+     protected $placesMapper;
 
-     // /**
-      // * @param PostMapperInterface $postMapper
-      // */
-     // public function __construct(PlacesMapperInterface $placesMapper)
-     // {
-         // $this->placesMapper = $placesMapper;
-     // }
+     /**
+      * @param PostMapperInterface $postMapper
+      */
+     public function __construct(PlacesMapperInterface $placesMapper)
+     {
+         $this->placesMapper = $placesMapper;
+     }
 
 	 
      /**

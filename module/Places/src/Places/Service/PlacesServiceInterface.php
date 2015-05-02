@@ -1,5 +1,5 @@
 <?php
- // Filename: /module/Places/src/Places/Service/PostServiceInterface.php
+ // Filename: /module/Places/src/Places/Service/PlacesServiceInterface.php
  namespace Places\Service;
 
  use Places\Model\PlacesInterface;

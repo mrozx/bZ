@@ -2,7 +2,7 @@
  // Filename: /module/Places/src/Places/Mapper/ZendDbSqlMapper.php
  namespace Places\Mapper;
 
-use Places\Model\PlacesInterface;
+ use Places\Model\PlacesInterface;
  use Zend\Db\Adapter\AdapterInterface;
  use Zend\Db\Adapter\Driver\ResultInterface;
  use Zend\Db\ResultSet\ResultSet;

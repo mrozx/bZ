@@ -10,8 +10,8 @@
 return array(
      'db' => array(
          'driver'         => 'Pdo',
-         'username'       => 'bimbiactlive',  //edit this
-         'password'       => 'Pass12Bimbi',  //edit this
+         'username'       => 'root',  //edit this
+         'password'       => 'pippoHostSql',  //edit this
          'dsn'            => 'mysql:dbname=bimbiMain;host=localhost',
          'driver_options' => array(
              \PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''

@@ -7,6 +7,7 @@
  use Zend\Db\Adapter\Driver\ResultInterface;
  use Zend\Db\ResultSet\HydratingResultSet;
  use Zend\Db\Sql\Sql;
+ use Zend\Stdlib\Hydrator\HydratorInterface;
  
  
  class ZendDbSqlMapper implements PlacesMapperInterface
@@ -16,13 +17,31 @@
       */
      protected $dbAdapter;
 
+    /**
+      * @var \Zend\Stdlib\Hydrator\HydratorInterface
+      */
+     protected $hydrator;
+
+     /**
+      * @var \Blog\Model\PostInterface
+      */
+     protected $placesPrototype;
+
      /**
       * @param AdapterInterface  $dbAdapter
+      * @param HydratorInterface $hydrator
+      * @param PostInterface    $placesPrototype
       */
-     public function __construct(AdapterInterface $dbAdapter)
-     {
-         $this->dbAdapter = $dbAdapter;
+     public function __construct(
+         AdapterInterface $dbAdapter,
+         HydratorInterface $hydrator,
+         PlacesInterface $placesPrototype
+     ) {
+         $this->dbAdapter      = $dbAdapter;
+         $this->hydrator       = $hydrator;
+         $this->placesPrototype  = $placesPrototype;
      }
+
 
      /**
       * @param int|string $id
@@ -40,15 +59,13 @@
      public function findAll()
      {
 		 $sql    = new Sql($this->dbAdapter);
-         $select = $sql->select();
-		 $select->from('activity'); 
-		 $select->columns(array('act_id' => 'act_id', 'name' => 'name','desc' => 'desc'));
+         $select = $sql->select('activity');
 
          $stmt   = $sql->prepareStatementForSqlObject($select);
          $result = $stmt->execute();
 
-          if ($result instanceof ResultInterface && $result->isQueryResult()) {
-             $resultSet = new HydratingResultSet(new \Zend\Stdlib\Hydrator\ClassMethods(), new \Places\Model\Places());
+         if ($result instanceof ResultInterface && $result->isQueryResult()) {
+             $resultSet = new HydratingResultSet($this->hydrator, $this->placesPrototype);
 
              return $resultSet->initialize($result);
          }

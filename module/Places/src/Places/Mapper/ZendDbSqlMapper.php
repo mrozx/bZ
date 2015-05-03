@@ -42,7 +42,7 @@
 		 $sql    = new Sql($this->dbAdapter);
          $select = $sql->select();
 		 $select->from('activity'); 
-		 $select->columns(array('act_id', 'name', 'desc'));
+		 $select->columns(array('act_id' => 'act_id', 'name' => 'name','desc' => 'desc'));
 
          $stmt   = $sql->prepareStatementForSqlObject($select);
          $result = $stmt->execute();

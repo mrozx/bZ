@@ -2,7 +2,7 @@
  // Filename: /module/Places/src/Places/Service/PlacesService.php
  namespace Places\Service;
  
-  use Blog\Mapper\PostMapperInterface;
+  use Places\Mapper\PlacesMapperInterface;
  
  class PlacesService implements PlacesServiceInterface
  {	

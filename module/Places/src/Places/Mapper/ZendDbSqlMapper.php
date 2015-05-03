@@ -50,7 +50,7 @@
 
              return $resultSet->initialize($result);
          }
-
+		
          die("no data");
      }
  }

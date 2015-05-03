@@ -7,17 +7,17 @@
      /**
       * @var int
       */
-     protected $id;
+     protected $act_id;
 
      /**
       * @var string
       */
-     protected $title;
+     protected $name;
 
      /**
       * @var string
       */
-     protected $text;
+     protected $desc;
 
      /**
       * {@inheritDoc}
@@ -32,7 +32,7 @@
       */
      public function setId($id)
      {
-         $this->id = $id;
+         $this->act_id = $id;
      }
 
      /**
@@ -48,7 +48,7 @@
       */
      public function setTitle($title)
      {
-         $this->title = $title;
+         $this->name = $title;
      }
 
      /**
@@ -64,6 +64,6 @@
       */
      public function setText($text)
      {
-         $this->text = $text;
+         $this->desc = $text;
      }
  }

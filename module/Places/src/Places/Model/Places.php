@@ -24,7 +24,7 @@
       */
      public function getId()
      {
-         return $this->id;
+         return $this->act_id;
      }
 
      /**
@@ -40,7 +40,7 @@
       */
      public function getTitle()
      {
-         return $this->title;
+         return $this->name;
      }
 
      /**
@@ -56,7 +56,7 @@
       */
      public function getText()
      {
-         return $this->text;
+         return $this->desc;
      }
 
      /**

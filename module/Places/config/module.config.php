@@ -9,7 +9,7 @@
 
 return array(
      'db' => array(
-         'driver'         => 'Pdo',
+         'driver'         => 'Pdo_Mysql',
          'username'       => 'root',  //edit this
          'password'       => 'pippoHostSql',  //edit this
          'dsn'            => 'mysql:dbname=bimbiMain;host=localhost',

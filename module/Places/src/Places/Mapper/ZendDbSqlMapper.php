@@ -40,7 +40,9 @@
      public function findAll()
      {
 		 $sql    = new Sql($this->dbAdapter);
-         $select = $sql->select('activity');
+         $select = $sql->select();
+		 $select->from('activity'); 
+		 $select->columns(array('act_id', 'name', 'desc'));
 
          $stmt   = $sql->prepareStatementForSqlObject($select);
          $result = $stmt->execute();

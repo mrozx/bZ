@@ -1,7 +1,8 @@
 <?php
  // Filename: /module/Places/src/Places/Service/PlacesService.php
  namespace Places\Service;
- use Places\Model\Places;
+ 
+  use Blog\Mapper\PostMapperInterface;
  
  class PlacesService implements PlacesServiceInterface
  {	

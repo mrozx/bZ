@@ -5,7 +5,7 @@
  use Places\Model\PlacesInterface;
  use Zend\Db\Adapter\AdapterInterface;
  use Zend\Db\Adapter\Driver\ResultInterface;
- use Zend\Db\ResultSet\ResultSet;
+ use Zend\Db\ResultSet\HydratingResultSet;
  use Zend\Db\Sql\Sql;
  
  
@@ -45,10 +45,10 @@
          $stmt   = $sql->prepareStatementForSqlObject($select);
          $result = $stmt->execute();
 
-         if ($result instanceof ResultInterface && $result->isQueryResult()) {
-             $resultSet = new ResultSet();
+          if ($result instanceof ResultInterface && $result->isQueryResult()) {
+             $resultSet = new HydratingResultSet(new \Zend\Stdlib\Hydrator\ClassMethods(), new \Places\Model\Places());
 
-             \Zend\Debug\Debug::dump($resultSet->initialize($result));die();
+             return $resultSet->initialize($result);
          }
 
          die("no data");

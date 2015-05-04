@@ -63,8 +63,6 @@
 		 $select->from('activity');
 		 $select->columns(array('act_id', 'name', 'desc'));
 		 
-         $select = $sql->select('activity');
-
          $stmt   = $sql->prepareStatementForSqlObject($select);
          $result = $stmt->execute();
 

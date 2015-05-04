@@ -9,7 +9,7 @@
       *
       * @return int
       */
-     public function getId();
+     public function getActid();
 
      /**
       * Will return the TITLE of the Places post

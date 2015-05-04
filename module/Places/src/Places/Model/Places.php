@@ -22,7 +22,7 @@
      /**
       * {@inheritDoc}
       */
-     public function getId()
+     public function getAct_id()
      {
          return $this->act_id;
      }
@@ -30,7 +30,7 @@
      /**
       * @param int $id
       */
-     public function setId($id)
+     public function setAct_id($id)
      {
          $this->act_id = $id;
      }
@@ -38,7 +38,7 @@
      /**
       * {@inheritDoc}
       */
-     public function getTitle()
+     public function getName()
      {
          return $this->name;
      }
@@ -46,7 +46,7 @@
      /**
       * @param string $title
       */
-     public function setTitle($title)
+     public function setName($title)
      {
          $this->name = $title;
      }
@@ -54,7 +54,7 @@
      /**
       * {@inheritDoc}
       */
-     public function getText()
+     public function getDesc()
      {
          return $this->desc;
      }
@@ -62,7 +62,7 @@
      /**
       * @param string $text
       */
-     public function setText($text)
+     public function setDesc($text)
      {
          $this->desc = $text;
      }

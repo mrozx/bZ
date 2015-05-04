@@ -7,7 +7,7 @@
      /**
       * @var int
       */
-     protected $act_id;
+     protected $id;
 
      /**
       * @var string
@@ -22,17 +22,17 @@
      /**
       * {@inheritDoc}
       */
-     public function getAct_id()
+     public function getId()
      {
-         return $this->act_id;
+         return $this->id;
      }
 
      /**
       * @param int $id
       */
-     public function setAct_id($id)
+     public function setId($id)
      {
-         $this->act_id = $id;
+         $this->id = $id;
      }
 
      /**

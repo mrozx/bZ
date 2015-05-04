@@ -9,19 +9,19 @@
       *
       * @return int
       */
-     public function getId();
+     public function getAct_id();
 
      /**
       * Will return the TITLE of the Places post
       *
       * @return string
       */
-     public function getTitle();
+     public function getName();
 
      /**
       * Will return the TEXT of the Places post
       *
       * @return string
       */
-     public function getText();
+     public function getDesc();
  }

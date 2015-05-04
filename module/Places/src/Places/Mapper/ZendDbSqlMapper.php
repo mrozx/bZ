@@ -59,6 +59,10 @@
      public function findAll()
      {
 		 $sql    = new Sql($this->dbAdapter);
+		 $select = $sql->select();
+		 $select->from('activity');
+		 $select->columns(array('act_id', 'name', 'desc'));
+		 
          $select = $sql->select('activity');
 
          $stmt   = $sql->prepareStatementForSqlObject($select);

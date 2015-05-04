@@ -66,8 +66,9 @@
 
          if ($result instanceof ResultInterface && $result->isQueryResult()) {
              $resultSet = new HydratingResultSet($this->hydrator, $this->placesPrototype);
-
-             return $resultSet->initialize($result);
+			
+			  \Zend\Debug\Debug::dump($resultSet->initialize($result));die();
+            // return $resultSet->initialize($result);
          }
 		
          die("no data");

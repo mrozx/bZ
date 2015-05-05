@@ -85,14 +85,14 @@
    public function save(PlacesInterface $placesObject)
    {
    
-	$postData = $this->hydrator->extract($postObject);
+	$postData = $this->hydrator->extract($placesObject);
       unset($postData['id']); // Neither Insert nor Update needs the ID in the array
 
-      if ($postObject->getId()) {
+      if ($placesObject->getActid()) {
          // ID present, it's an Update
          $action = new Update('activity');
          $action->set($postData);
-         $action->where(array('id = ?' => $postObject->getId()));
+         $action->where(array('id = ?' => $placesObject->getActid()));
       } else {
          // ID NOT present, it's an Insert
          $action = new Insert('activity');
@@ -106,10 +106,10 @@
       if ($result instanceof ResultInterface) {
          if ($newId = $result->getGeneratedValue()) {
             // When a value has been generated, set it on the object
-            $postObject->setId($newId);
+            $placesObject->setId($newId);
          }
 
-         return $postObject;
+         return $placesObject;
       }
 
       throw new \Exception("Database error");

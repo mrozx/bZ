@@ -6,8 +6,10 @@
 
  class PlacesForm extends Form
  {
-     public function __construct()
+     public function __construct($name = null, $options = array())
      {
+		parent::__construct($name, $options);
+		
          $this->add(array(
              'name' => 'places-fieldset',
              'type' => 'Places\Form\PlacesFieldset'

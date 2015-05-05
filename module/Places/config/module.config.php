@@ -73,7 +73,7 @@ return array(
                          'options' => array(
                              'route'    => '/add',
                              'defaults' => array(
-                                 'controller' => 'Blog\Controller\Write',
+                                 'controller' => 'Places\Controller\Write',
                                  'action'     => 'add'
                              )
                         )

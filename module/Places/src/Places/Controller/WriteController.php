@@ -22,5 +22,8 @@ namespace Places\Controller;
 
      public function addAction()
      {
+		return new ViewModel(array(
+             'form' => $this->placesForm
+         ));
      }
  }

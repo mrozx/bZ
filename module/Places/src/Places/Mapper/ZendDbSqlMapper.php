@@ -6,7 +6,9 @@
  use Zend\Db\Adapter\AdapterInterface;
  use Zend\Db\Adapter\Driver\ResultInterface;
  use Zend\Db\ResultSet\HydratingResultSet;
+ use Zend\Db\Sql\Insert;
  use Zend\Db\Sql\Sql;
+ use Zend\Db\Sql\Update;
  use Zend\Stdlib\Hydrator\HydratorInterface;
  
  

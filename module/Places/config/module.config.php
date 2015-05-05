@@ -68,7 +68,7 @@ return array(
                              )
                          )
                      ),
-				 ),
+				 
 				 'add' => array(
                          'type' => 'literal',
                          'options' => array(
@@ -80,6 +80,7 @@ return array(
                         )
                  ),
             ),
+			),
 		),
 	),
      'view_manager' => array(

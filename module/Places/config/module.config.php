@@ -53,6 +53,20 @@ return array(
                          'action'     => 'index',
                      ),
                  ),
+				 'may_terminate' => true,
+                 'child_routes'  => array(
+                     'detail' => array(
+                         'type' => 'segment',
+                         'options' => array(
+                             'route'    => '/:id',
+                             'defaults' => array(
+                                 'action' => 'detail'
+                             ),
+                             'constraints' => array(
+                                 'id' => '\d+'
+                             )
+                         )
+                     ),
 				 'add' => array(
                          'type' => 'literal',
                          'options' => array(
@@ -61,8 +75,8 @@ return array(
                                  'controller' => 'Blog\Controller\Write',
                                  'action'     => 'add'
                              )
-                         )
-                    )
+                        )
+                 ),
              ),
          ),
      ),

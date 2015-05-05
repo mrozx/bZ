@@ -42,7 +42,7 @@
      /**
       * {@inheritDoc}
       */
-     public function save(PlacesInterface $places)
+     public function savePlace(PlacesInterface $places)
      {
          return $this->placesMapper->save($places);
      }

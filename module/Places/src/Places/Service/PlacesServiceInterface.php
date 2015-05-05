@@ -29,6 +29,6 @@
       * @param  PlacesInterface $places
       * @return PlacesInterface
       */
-	 public function savePost(PlacesInterface $places);
+	 public function save(PlacesInterface $places);
  }
  

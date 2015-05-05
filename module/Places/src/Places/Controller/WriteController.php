@@ -30,7 +30,7 @@ namespace Places\Controller;
 
              if ($this->placesForm->isValid()) {
                  try {
-					\Zend\Debug\Debug::dump($this->placesForm->getData());die();
+					//\Zend\Debug\Debug::dump($this->placesForm->getData());die();
                      $this->postService->savePost($this->placesForm->getData());
 
                      return $this->redirect()->toRoute('places');

@@ -3,6 +3,7 @@
  namespace Places\Service;
  
   use Places\Mapper\PlacesMapperInterface;
+   use Places\Model\PlacesInterface;
  
  class PlacesService implements PlacesServiceInterface
  {	

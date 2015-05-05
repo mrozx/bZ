@@ -29,6 +29,7 @@ return array(
      'controllers' => array(
          'factories' => array(
              'Places\Controller\Places' => 'Places\Factory\PlacesControllerFactory',
+			 'Places\Controller\Write' => 'Places\Factory\WriteControllerFactory',
          ),
      ),
 	 
@@ -45,13 +46,23 @@ return array(
 					// the route is ``/album[/:action][/:id]`` which will match any URL that starts with /album. 
 					//The next segment will be an optional action name, 
 					//and then finally the next segment will be mapped to an optional id. 
-					  'route'    => '/blog',
+					  'route'    => '/places',
                      // Define default controller and action to be called when this route is matched
                      'defaults' => array(
                          'controller' => 'Places\Controller\Places',
                          'action'     => 'index',
                      ),
                  ),
+				 'add' => array(
+                         'type' => 'literal',
+                         'options' => array(
+                             'route'    => '/add',
+                             'defaults' => array(
+                                 'controller' => 'Blog\Controller\Write',
+                                 'action'     => 'add'
+                             )
+                         )
+                    )
              ),
          ),
      ),

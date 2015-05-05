@@ -59,7 +59,7 @@ return array(
                      'detail' => array(
                          'type' => 'segment',
                          'options' => array(
-                             'route'    => '/:id',
+                             'route'    => ':id',
                              'defaults' => array(
                                  'action' => 'detail'
                              ),

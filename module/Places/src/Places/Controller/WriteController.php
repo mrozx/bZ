@@ -1,6 +1,6 @@
  <?php
- // Filename: /module/Places/src/Places/Controller/WriteController.php
- namespace Places\Controller;
+// Filename: /module/Places/src/Places/Controller/WriteController.php
+namespace Places\Controller;
 
  use Places\Service\PlacesServiceInterface;
  use Zend\Form\FormInterface;

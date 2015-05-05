@@ -51,8 +51,9 @@ return array(
                      'defaults' => array(
                          'controller' => 'Places\Controller\Places',
                          'action'     => 'index',
-                     ),
-                 ),
+						),
+					),
+				),
 				 'may_terminate' => true,
                  'child_routes'  => array(
                      'detail' => array(
@@ -80,7 +81,7 @@ return array(
                  ),
             ),
      ),
-	  ),
+	 
      'view_manager' => array(
          'template_path_stack' => array(
 				__DIR__ . '/../view/',

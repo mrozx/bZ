@@ -24,4 +24,18 @@
       * @return string
       */
      public function getDesc();
+	 
+	 /**
+      * Will return the telephone of the Places post
+      *
+      * @return string
+      */
+     public function getTel();
+	 
+	 /**
+      * Will return the website of the Places post
+      *
+      * @return string
+      */
+     public function getWeb();
  }

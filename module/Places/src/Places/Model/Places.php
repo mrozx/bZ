@@ -66,4 +66,38 @@
      {
          $this->desc = $text;
      }
+	 
+	 /**
+      * {@inheritDoc}
+      */
+     public function getTel()
+     {
+         return $this->tel;
+     }
+
+     /**
+      * @param string $text
+      */
+     public function setTel($text)
+     {
+         $this->tel = $text;
+     }
+	 
+	 /**
+      * {@inheritDoc}
+      */
+     public function getWeb()
+     {
+         return $this->web;
+     }
+
+     /**
+      * @param string $text
+      */
+     public function setWeb($text)
+     {
+         $this->web = $text;
+     }
+	 
+	 
  }

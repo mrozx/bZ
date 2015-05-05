@@ -46,7 +46,7 @@ return array(
 					// the route is ``/album[/:action][/:id]`` which will match any URL that starts with /album. 
 					//The next segment will be an optional action name, 
 					//and then finally the next segment will be mapped to an optional id. 
-					  'route'    => '/places',
+					  'route'    => '/',
                      // Define default controller and action to be called when this route is matched
                      'defaults' => array(
                          'controller' => 'Places\Controller\Places',

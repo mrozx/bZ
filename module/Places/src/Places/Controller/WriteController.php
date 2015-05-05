@@ -26,11 +26,12 @@ namespace Places\Controller;
 		 $request = $this->getRequest();
 
          if ($request->isPost()) {
-             $this->postForm->setData($request->getPost());
+             $this->placesForm->setData($request->getPost());
 
-             if ($this->postForm->isValid()) {
+             if ($this->placesForm->isValid()) {
                  try {
-                     $this->postService->savePost($this->postForm->getData());
+					\Zend\Debug\Debug::dump($this->placesForm->getData());die();
+                     $this->postService->savePost($this->placesForm->getData());
 
                      return $this->redirect()->toRoute('places');
                  } catch (\Exception $e) {

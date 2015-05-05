@@ -108,7 +108,7 @@
       if ($result instanceof ResultInterface) {
          if ($newId = $result->getGeneratedValue()) {
             // When a value has been generated, set it on the object
-            $placesObject->setId($newId);
+            $placesObject->setActid($newId);
          }
 
          return $placesObject;

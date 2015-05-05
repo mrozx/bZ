@@ -20,7 +20,9 @@
 		
 		$this->add(array(
              'type' => 'button',
-             'label' => 'next-button',
+			 'label' => 'next-button',
+             'name' => 'next-button',
+			 
              'attributes' => array(
                  'value' => 'next'
              )

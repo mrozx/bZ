@@ -1,5 +1,5 @@
 <?php
- // Filename: /module/Places/src/Places/Form/PlacesForm.phpPlacesForm.php
+ // Filename: /module/Places/src/Places/Form/PlacesForm.php
  namespace Places\Form;
 
  use Zend\Form\Form;
@@ -12,7 +12,10 @@
 		
          $this->add(array(
              'name' => 'places-fieldset',
-             'type' => 'Places\Form\PlacesFieldset'
+             'type' => 'Places\Form\PlacesFieldset',
+			 'options' => array(
+                 'use_as_base_fieldset' => true
+             )
          ));
 
          $this->add(array(

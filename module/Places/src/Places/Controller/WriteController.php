@@ -1,6 +1,5 @@
  <?php
  // Filename: /module/Places/src/Places/Controller/WriteController.php
- 
  namespace Places\Controller;
 
  use Places\Service\PlacesServiceInterface;

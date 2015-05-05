@@ -17,7 +17,15 @@
                  'use_as_base_fieldset' => true
              )
          ));
-
+		
+		$this->add(array(
+             'type' => 'button',
+             'name' => 'next-button',
+             'attributes' => array(
+                 'value' => 'next'
+             )
+         ));
+		 
          $this->add(array(
              'type' => 'submit',
              'name' => 'submit',

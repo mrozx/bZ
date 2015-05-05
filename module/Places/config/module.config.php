@@ -46,7 +46,7 @@ return array(
 					// the route is ``/album[/:action][/:id]`` which will match any URL that starts with /album. 
 					//The next segment will be an optional action name, 
 					//and then finally the next segment will be mapped to an optional id. 
-					  'route'    => '/places',
+					  'route'    => '/',
                      // Define default controller and action to be called when this route is matched
                      'defaults' => array(
                          'controller' => 'Places\Controller\Places',
@@ -56,23 +56,11 @@ return array(
 				
 				 'may_terminate' => true,
                  'child_routes'  => array(
-                     'detail' => array(
-                         'type' => 'segment',
-                         'options' => array(
-                             'route'    => '/:id',
-                             'defaults' => array(
-                                 'action' => 'detail'
-                             ),
-                             'constraints' => array(
-                                 'id' => '\d+'
-                             )
-                         )
-                     ),
-				 
+                     		 
 				 'add' => array(
                          'type' => 'literal',
                          'options' => array(
-                             'route'    => '/add',
+                             'route'    => 'add',
                              'defaults' => array(
                                  'controller' => 'Places\Controller\Write',
                                  'action'     => 'add'

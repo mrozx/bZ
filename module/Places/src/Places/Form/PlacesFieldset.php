@@ -2,7 +2,7 @@
 // Filename: /module/Places/src/Places/Form/PlacesFieldset.php
 namespace Places\Form;
 
- use Blog\Model\Post;
+ use Places\Model\Places;
  use Zend\Form\Fieldset;
  use Zend\Stdlib\Hydrator\ClassMethods;
 

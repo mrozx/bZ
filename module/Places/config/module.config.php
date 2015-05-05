@@ -76,10 +76,10 @@ return array(
                              'defaults' => array(
                                  'controller' => 'Places\Controller\Write',
                                  'action'     => 'add'
-                             )
-                        )
-                 ),
-            ),
+								)
+							)
+					),
+				),
 			),
 		),
 	),

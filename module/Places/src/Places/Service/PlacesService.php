@@ -37,4 +37,13 @@
          // TODO: Implement findPlace() method.
 		  return $this->placesMapper->find($id);
      }
+	 
+	 
+     /**
+      * {@inheritDoc}
+      */
+     public function savePost(PlacesInterface $places)
+     {
+         return $this->placesMapper->save($places);
+     }
  }

@@ -21,4 +21,14 @@
       * @return PlacesInterface
       */
      public function findPlace($id);
+	 
+	 /**
+      * Should save a given implementation of the PostInterface and return it. If it is an existing Post the Post
+      * should be updated, if it's a new Post it should be created.
+      *
+      * @param  PlacesInterface $places
+      * @return PlacesInterface
+      */
+	 public function savePost(PlacesInterface $places);
  }
+ 

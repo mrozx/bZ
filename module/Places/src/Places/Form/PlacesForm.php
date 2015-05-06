@@ -25,7 +25,7 @@
 				 'label' => 'next',
 			 ),
              'attributes' => array(
-                 'value' => 'next'
+                 'value' => 'next',
 				 'class' => 'testClass'
              )
          ));

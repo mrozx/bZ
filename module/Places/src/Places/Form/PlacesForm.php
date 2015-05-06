@@ -22,21 +22,20 @@
              'type' => 'button',
 			 'name' => 'next-button',
 			 'options' => array(	
-				 'label' => 'next-button',
+				 'label' => 'next',
 			 ),
-            
-			 
              'attributes' => array(
                  'value' => 'next'
+				 'class' => 'testClass'
              )
          ));
 		 
-         $this->add(array(
-             'type' => 'submit',
-             'name' => 'submit',
-             'attributes' => array(
-                 'value' => 'Insert new Post'
-             )
-         ));
+         // $this->add(array(
+             // 'type' => 'submit',
+             // 'name' => 'submit',
+             // 'attributes' => array(
+                 // 'value' => 'Insert new Post'
+             // )
+         // ));
      }
  }

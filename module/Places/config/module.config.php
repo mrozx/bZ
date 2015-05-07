@@ -60,11 +60,14 @@ return array(
 				 'add' => array(
                          'type' => 'literal',
                          'options' => array(
-                             'route'    => 'add',
+                             'route'    => 'add[/:step]',
                              'defaults' => array(
                                  'controller' => 'Places\Controller\Write',
                                  'action'     => 'add'
-								)
+								),
+							 'constraints' => array(
+								 'step' => '\d'
+                         )
 							)
 					),
 				),

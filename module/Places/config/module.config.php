@@ -66,7 +66,7 @@ return array(
                                  'action'     => 'add'
 								),
 							 'constraints' => array(
-								 'step' => '\d'
+								 'step' => '\d+'
                          )
 							)
 					),

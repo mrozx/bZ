@@ -24,7 +24,7 @@ namespace Places\Controller;
      public function addAction()
      {
 		 
-		  $id = $this->params()->fromRoute('id');
+		  $id = $this->params()->fromRoute('step');
 		  if($id == 1) {
 		  
 			return new ViewModel(array(

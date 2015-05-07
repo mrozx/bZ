@@ -50,8 +50,6 @@ namespace Places\Controller;
              }
          }
 
-		return new ViewModel(array(
-             'form' => $this->placesForm
-         ));
+		
      }
  }

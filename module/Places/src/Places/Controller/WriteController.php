@@ -23,6 +23,16 @@ namespace Places\Controller;
 
      public function addAction()
      {
+		 
+		  $id = $this->params()->fromRoute('id');
+		  if($id == 1) {
+		  
+			return new ViewModel(array(
+             'form' => $this->placesForm
+         ));
+		  }	
+         
+		 
 		 $request = $this->getRequest();
 
          if ($request->isPost()) {

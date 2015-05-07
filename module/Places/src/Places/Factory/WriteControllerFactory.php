@@ -12,7 +12,7 @@
      {
          $realServiceLocator = $serviceLocator->getServiceLocator();
          $placesService        = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
-         $placesInsertForm     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSub01Form');
+         $placesInsertForm     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubOneForm');
 
          return new WriteController(
              $placesService,

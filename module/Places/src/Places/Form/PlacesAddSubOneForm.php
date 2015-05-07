@@ -12,7 +12,7 @@
 		
          $this->add(array(
              'name' => 'places-fieldset',
-             'type' => 'Places\Form\PlacesAddSubOneFieldSet',
+             'type' => 'Places\Form\PlacesAddSubOneFieldset',
 			 'options' => array(
                  'use_as_base_fieldset' => true
              )

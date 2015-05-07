@@ -1,12 +1,12 @@
 <?php
-// Filename: /module/Places/src/Places/Form/PlacesFieldset.php
+// Filename: /module/Places/src/Places/Form/PlacesAddSub01Fieldset.php
 namespace Places\Form;
 
  use Places\Model\Places;
  use Zend\Form\Fieldset;
  use Zend\Stdlib\Hydrator\ClassMethods;
 
-class placeFieldsetGeneral extends Fieldset
+class PlacesAddSub01Fieldset extends Fieldset
 {
    public function __construct($name = null, $options = array())
    {

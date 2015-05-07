@@ -1,10 +1,10 @@
 <?php
- // Filename: /module/Places/src/Places/Form/PlacesForm.php
+ // Filename: /module/Places/src/Places/Form/PlacesAddSub01Form.php
  namespace Places\Form;
 
  use Zend\Form\Form;
 
- class PlacesForm extends Form
+ class PlacesAddSub01Form extends Form
  {
      public function __construct($name = null, $options = array())
      {
@@ -12,7 +12,7 @@
 		
          $this->add(array(
              'name' => 'places-fieldset',
-             'type' => 'Places\Form\PlacesFieldset',
+             'type' => 'Places\Form\PlacesAddSub01FieldSet',
 			 'options' => array(
                  'use_as_base_fieldset' => true
              )

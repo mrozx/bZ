@@ -70,7 +70,22 @@ namespace Places\Controller;
 			return $formTwo->addAction();
 			}
 		 
-		 \Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
+		$request = $this->getRequest();
+		if ($request->isPost()) {
+	         $this->placesFormOne->setData($request->getPost());
+
+             if ($this->placesFormOne->isValid()) {
+                 try {
+					\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
+                  //   $this->placesService->savePlace($this->placesFormOne->getData());
+
+                   
+					return $this->redirect()->toRoute('add/2');
+                 } catch (\Exception $e) {
+                     // Some DB Error happened, log it and let the user know
+                 }
+             }
+         }
 		$primaryView = new ViewModel(array(
 		
              'form' => $this->placesFormOne,

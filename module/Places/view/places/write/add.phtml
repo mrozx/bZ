@@ -3,7 +3,7 @@
    <?php
   
  $form = $this->form;
- $form->setAttribute('action', $this->url(null, array('action' => '')));
+ $form->setAttribute('action', $this->url(null, array('action' => 'loadform'.$this->nextstep)));
  $form->prepare();
 
  echo $this->form()->openTag($form);

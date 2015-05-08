@@ -30,9 +30,9 @@ namespace Places\Controller;
 	  public function loadformAction()
      {
 		
-        $id = $this->params()->fromRoute('step');
+        //$id = $this->params()->fromRoute('step');
 		
-		if($id == 1) {
+		//if($id == 1) {
 		
 		$request = $this->getRequest();
 		if ($request->isPost()) {
@@ -42,8 +42,6 @@ namespace Places\Controller;
                  try {
 				//	\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
-
-                   
 					return $this->redirect()->toRoute('add/2');
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know
@@ -63,13 +61,7 @@ namespace Places\Controller;
 			return $primaryView;
 			
 			}
-			
-		  if($id == 2) {
-			
-			$two = new PlacesAddSubTwoForm(null,null);
-			$formTwo = new AddtwoController($this->placesService, $two);
-			return $formTwo->addAction();
-			}
+		
 		 
 		$request = $this->getRequest();
 		if ($request->isPost()) {
@@ -88,14 +80,7 @@ namespace Places\Controller;
              }
          }
 		 
-		$primaryView = new ViewModel(array(
 		
-             'form' => $this->placesFormOne,
-			 //'test' => $this->placesService->getName()
-			));
-			
-		$primaryView->setTemplate('write/add');
-			return $primaryView;
      }
  }
  

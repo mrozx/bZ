@@ -27,7 +27,7 @@ namespace Places\Controller;
          
 		  
 		 $request = $this->getRequest();
-
+		try {
          if ($request->isPost()) {
              $this->placesForm->setData($request->getPost());
 
@@ -43,6 +43,7 @@ namespace Places\Controller;
                  }
              }
          }
+		 
 
 		$this->placesService->setName("shalom");
 		  $primaryView = new ViewModel(array(

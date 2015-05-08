@@ -18,13 +18,14 @@ namespace Places\Controller;
 	 
 	  public function loadformAction()
      {
+		$placesS = $this->$placesService;
         $id = $this->params()->fromRoute('step');
 		  if($id == 1) {
 			  // $primaryView = new ViewModel(array(
              // 'form' => "dsds"
 			// ));
 		// $primaryView->setTemplate('write/add');
-		$formOne = new AddoneController(&this->$placesService);
+		$formOne = new AddoneController($placesS);
 			return $formOne->addAction();
 			}
      }

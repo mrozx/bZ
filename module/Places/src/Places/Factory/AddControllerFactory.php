@@ -17,9 +17,11 @@
       */
      public function createService(ServiceLocatorInterface $serviceLocator)
      {
-         $realServiceLocator = $serviceLocator->getServiceLocator();
-         $placesService        = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
-
-         return new AddController($placesService);
+         $realServiceLocator 	  = $serviceLocator->getServiceLocator();
+         $placesService        	  = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
+		 $placesInsertFormOne     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubOneForm');
+		
+         return new AddController(
+		 $placesService, $placesInsertFormOne);
      }
  }

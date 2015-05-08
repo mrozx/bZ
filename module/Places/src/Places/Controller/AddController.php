@@ -2,22 +2,27 @@
 	
 namespace Places\Controller;
 
- use Places\Model\PlacesInterface;
+ //use Places\Model\PlacesInterface;
  use Places\Service\PlacesServiceInterface;
  use Places\Controller\AddoneController;
- use Places\Form\PlacesAddSubOneForm;
- use Places\Form\PlacesAddSubTwoForm;
+// use Places\Form\PlacesAddSubOneForm;
+// use Places\Form\PlacesAddSubTwoForm;
+  use Zend\Form\FormInterface;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
  class AddController extends AbstractActionController
  {
     protected $placesService;
+	 protected $placesFormOne;
 	
-	
-     public function __construct(PlacesServiceInterface $placesService)
+     public function __construct(
+		PlacesServiceInterface $placesService,
+		FormInterface $placesFormOne
+		)
      {
          $this->placesService = $placesService;
+		 $this->placesFormOne = $placesForm;
 		 
      }
 	 
@@ -26,16 +31,16 @@ namespace Places\Controller;
 		
         $id = $this->params()->fromRoute('step');
 		
-		  if($id == 1) {
-		if(isset($formOne))  {
+		if($id == 1) {
+		
 		$request = $formOne->getRequest();
 		if ($request->isPost()) {
-	         $formOne->placesForm->setData($request->getPost());
+	         $formOne->placesFormOne->setData($request->getPost());
 
-             if ($formOne->placesForm->isValid()) {
+             if ($formOne->placesFormOne->isValid()) {
                  try {
-					\Zend\Debug\Debug::dump($formOne->placesForm->getData());die();
-                  //   $this->placesService->savePlace($this->placesForm->getData());
+					\Zend\Debug\Debug::dump($formOne->placesFormOne->getData());die();
+                  //   $this->placesService->savePlace($this->placesFormOne->getData());
 
                    
 					return $this->redirect()->toRoute('add/2');
@@ -44,10 +49,17 @@ namespace Places\Controller;
                  }
              }
          }
-		} 
-			$one = new PlacesAddSubOneForm(null,null);
-			$formOne = new AddoneController($this->placesService, $one);
-			return $formOne->addAction();
+		
+			// $one = new PlacesAddSubOneForm(null,null);
+			// $formOne = new AddoneController($this->placesService, $one);
+			// return $formOne->addAction();
+			 $primaryView = new ViewModel(array(
+             'form' => $this->placesFormOne,
+			 //'test' => $this->placesService->getName()
+			));
+			
+		$primaryView->setTemplate('write/add');
+			return $primaryView;
 			
 			}
 			

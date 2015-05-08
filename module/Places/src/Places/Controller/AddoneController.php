@@ -29,7 +29,7 @@ namespace Places\Controller;
 			));
 		$primaryView->setTemplate('write/add');
 			return $primaryView;
-		  }	
+		  	
          
 		  
 		 $request = $this->getRequest();

@@ -18,18 +18,19 @@ namespace Places\Controller;
 	
      public function __construct(
 		PlacesServiceInterface $placesService,
-		FormInterface $placesFormOne
+		FormInterface $placesFormOne,
+		FormInterface $placesFormTwo
 		)
      {
          $this->placesService = $placesService;
 		 $this->placesFormOne = $placesFormOne;
-		 
+		 $this->placesFormTwo = $placesFormTwo;
      }
 	 
 	  public function loadformAction()
      {
 		
-        $id = $this->params()->fromRoute('step');
+        //$id = $this->params()->fromRoute('step');
 		
 		if($id == 1) {
 		

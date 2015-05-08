@@ -20,8 +20,9 @@
          $realServiceLocator 	  = $serviceLocator->getServiceLocator();
          $placesService        	  = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
 		 $placesInsertFormOne     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubOneForm');
-		
+		 $placesInsertFormTwo     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubTwoForm');
+		 
          return new AddController(
-		 $placesService, $placesInsertFormOne);
+		 $placesService, $placesInsertFormOne, $placesInsertFormTwo);
      }
  }

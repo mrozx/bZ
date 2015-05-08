@@ -18,25 +18,27 @@
              )
          ));
 		
-		$this->add(array(
-             'type' => 'button',
-			 'name' => 'next-button',
+		// $this->add(array(
+             // 'type' => 'button',
+			 // 'name' => 'next-button',
+			 // 'options' => array(	
+				 // 'label' => 'next',
+			 // ),
+             // 'attributes' => array(
+                 // 'value' => 'next',
+				 // 'class' => 'testClass',
+             // )
+         // ));
+		 
+         $this->add(array(
+             'type' => 'submit',
+             'name' => 'submit',
 			 'options' => array(	
 				 'label' => 'next',
 			 ),
              'attributes' => array(
-                 'value' => 'next',
-				 'class' => 'testClass',
-				 'href' => ''
+                 'value' => 'go to step 2'
              )
          ));
-		 
-         // $this->add(array(
-             // 'type' => 'submit',
-             // 'name' => 'submit',
-             // 'attributes' => array(
-                 // 'value' => 'Insert new Post'
-             // )
-         // ));
      }
  }

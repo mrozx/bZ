@@ -7,7 +7,7 @@ namespace Places\Controller;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
- class WriteController extends AbstractActionController
+ class AddOneController extends AbstractActionController
  {
      protected $placesService;
 
@@ -26,10 +26,9 @@ namespace Places\Controller;
 		 
 		  $id = $this->params()->fromRoute('step');
 		  if($id == 1) {
-		  
 			return new ViewModel(array(
              'form' => $this->placesForm
-         ));
+			));
 		  }	
          
 		 
@@ -41,9 +40,9 @@ namespace Places\Controller;
              if ($this->placesForm->isValid()) {
                  try {
 					//\Zend\Debug\Debug::dump($this->placesForm->getData());die();
-                     $this->placesService->savePlace($this->placesForm->getData());
+                  //   $this->placesService->savePlace($this->placesForm->getData());
 
-                     return $this->redirect()->toRoute('places');
+                     return $this->redirect()->toRoute('add/2');
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know
                  }

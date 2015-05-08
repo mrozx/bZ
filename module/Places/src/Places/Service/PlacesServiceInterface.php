@@ -4,6 +4,7 @@
 
  use Places\Model\PlacesInterface;
 
+
  interface PlacesServiceInterface
  {
      /**

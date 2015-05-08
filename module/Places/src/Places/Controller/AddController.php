@@ -13,10 +13,10 @@ namespace Places\Controller;
  {
     protected $places;
 
-     public function __construct(PlacesInterface $places)
-     {
-         $this->places = $places;
-     }
+     // public function __construct(PlacesInterface $places)
+     // {
+         // $this->places = $places;
+     // }
 	 
 	  public function loadformAction()
      {

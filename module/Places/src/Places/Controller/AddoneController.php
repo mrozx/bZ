@@ -23,7 +23,7 @@ namespace Places\Controller;
 
      public function addAction()
      {
-		 $this->placesService->placesMapper->placesPrototype->setName("shalom");
+		 $this->placesService->setName("shalom");
 		  $primaryView = new ViewModel(array(
              'form' => $this->placesForm,
 			 'test' => "sds"

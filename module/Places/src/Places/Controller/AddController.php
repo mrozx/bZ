@@ -89,7 +89,7 @@ namespace Places\Controller;
 					//'test' => $this->placesService->getName()
 					));
 			
-					$primaryView->setTemplate('write/add');
+					$primaryView->setTemplate('write/add1');
 					return $primaryView;
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know

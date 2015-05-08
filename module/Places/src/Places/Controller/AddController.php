@@ -20,7 +20,7 @@ namespace Places\Controller;
          $id = $this->params()->fromRoute('step');
 		  if($id == 1) {
 			  $primaryView = new ViewModel(array(
-             'form' => "dsds";
+             'form' => "dsds"
 			));
 		$primaryView->setTemplate('write/add');
 			return $primaryView;

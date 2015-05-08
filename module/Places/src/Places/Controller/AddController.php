@@ -37,7 +37,7 @@ namespace Places\Controller;
 			$formTwo = new AddtwoController($this->placesService, $two);
 			return $formTwo->addAction();
 			}
-		
+		 $request = $this->getRequest();
 		if ($request->isPost()) {
 	          $this->placesForm->setData($request->getPost());
 

@@ -118,7 +118,7 @@
 	}
 	
 	 public function getName() {
-			 $this->placesPrototype->getName();
+			return $this->placesPrototype->getName();
 		}
 	 
 	 public function setName($text){

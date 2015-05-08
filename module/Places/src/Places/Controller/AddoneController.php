@@ -25,9 +25,9 @@ namespace Places\Controller;
      {
 
 		 $request = $this->getRequest();
-		
+		return $this->redirect()->toRoute('add/2');
          if ($request->isPost()) {
-		 return $this->redirect()->toRoute('add/2');
+		 
              $this->placesForm->setData($request->getPost());
 
              if ($this->placesForm->isValid()) {

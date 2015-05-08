@@ -23,15 +23,7 @@ namespace Places\Controller;
 
      public function addAction()
      {
-		 $this->placesService->setName("shalom");
-		  $primaryView = new ViewModel(array(
-             'form' => $this->placesForm,
-			 'test' => $this->placesService->getName()
-			));
-			
-		$primaryView->setTemplate('write/add');
-			return $primaryView;
-		  	
+		 
          
 		  
 		 $request = $this->getRequest();
@@ -45,13 +37,21 @@ namespace Places\Controller;
                   //   $this->placesService->savePlace($this->placesForm->getData());
 
                    
-				//	return $this->redirect()->toRoute('add/2');
+					return $this->redirect()->toRoute('add/2');
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know
                  }
              }
          }
 
-		
+		$this->placesService->setName("shalom");
+		  $primaryView = new ViewModel(array(
+             'form' => $this->placesForm,
+			 'test' => $this->placesService->getName()
+			));
+			
+		$primaryView->setTemplate('write/add');
+			return $primaryView;
+		  	
      }
  }

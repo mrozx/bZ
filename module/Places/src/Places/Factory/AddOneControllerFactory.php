@@ -2,7 +2,7 @@
  // Filename: /module/Places/src/Places/Factory/AddOneControllerFactory.php
  namespace Places\Factory;
 
- use Places\Controller\AddOneController.php;
+ use Places\Controller\AddOneController;
  use Zend\ServiceManager\FactoryInterface;
  use Zend\ServiceManager\ServiceLocatorInterface;
 

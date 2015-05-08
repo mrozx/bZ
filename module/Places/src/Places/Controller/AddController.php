@@ -2,7 +2,7 @@
 	
 namespace Places\Controller;
 
- use Places\Service\PlacesServiceInterface;
+ use Places\Model\PlacesInterface;
  use Places\Controller\AddoneController;
  use Places\Form\PlacesAddSubOneForm;
  use Places\Form\PlacesAddSubTwoForm;

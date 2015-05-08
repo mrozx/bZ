@@ -34,15 +34,6 @@ namespace Places\Controller;
 			return $primaryView;
 		  }	
          
-		 $id = $this->params()->fromRoute('step');
-		  if($id == 2) {
-		
-		$primaryView = new ViewModel(array(
-             'form' => $this->placesForm
-			));
-		$primaryView->setTemplate('write/add');
-			return $primaryView;
-		  }	
 		  
 		 $request = $this->getRequest();
 

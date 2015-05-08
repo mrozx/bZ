@@ -29,7 +29,7 @@ return array(
      'controllers' => array(
          'factories' => array(
              'Places\Controller\Places' => 'Places\Factory\PlacesControllerFactory',
-			 
+			 'Places\Controller\Add' => 'Places\Factory\AddControllerFactory',
 			 'Places\Controller\Addone' => 'Places\Factory\AddoneControllerFactory',
 			 'Places\Controller\Addtwo' => 'Places\Factory\AddtwoControllerFactory',
          ),
@@ -64,8 +64,8 @@ return array(
                          'options' => array(
                              'route'    => 'add[/:step]',
                              'defaults' => array(
-                                 'controller' => 'Places\Controller\Addone',
-                                 'action'     => 'add'
+                                 'controller' => 'Places\Controller\Add',
+                                 'action'     => 'loadForm'
 								),
 							 'constraints' => array(
 								 'step' => '[1-9]\d*'

@@ -40,7 +40,7 @@ namespace Places\Controller;
                      // Some DB Error happened, log it and let the user know
                  }
              //}
-         }
+       
 		 
 
 		//$this->placesService->setName("shalom");

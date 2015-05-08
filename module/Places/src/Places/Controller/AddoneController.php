@@ -45,7 +45,7 @@ namespace Places\Controller;
                   //   $this->placesService->savePlace($this->placesForm->getData());
 
                    
-					return $this->redirect()->toRoute('places');
+					return $this->redirect()->toRoute('add/2');
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know
                  }

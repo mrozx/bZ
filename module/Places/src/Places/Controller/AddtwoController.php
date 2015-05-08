@@ -22,17 +22,7 @@ namespace Places\Controller;
      }
 
      public function addAction()
-     {
-		 
-		  
-		$primaryView = new ViewModel(array(
-             'form' => $this->placesForm
-			));
-		$primaryView->setTemplate('write/add');
-			return $primaryView;
-		 
-		  	
-         
+     {     
 		 
 		 $request = $this->getRequest();
 
@@ -52,6 +42,11 @@ namespace Places\Controller;
              }
          }
 
-		
+		  
+		$primaryView = new ViewModel(array(
+             'form' => $this->placesForm
+			));
+		$primaryView->setTemplate('write/add');
+			return $primaryView;
      }
  }

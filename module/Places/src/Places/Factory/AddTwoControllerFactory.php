@@ -2,7 +2,7 @@
  // Filename: /module/Places/src/Places/Factory/AddTwoControllerFactory.php
  namespace Places\Factory;
 
- use Places\Controller\WriteController;
+ use Places\Controller\AddtwoController;
  use Zend\ServiceManager\FactoryInterface;
  use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -14,7 +14,7 @@
          $placesService        = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
          $placesInsertForm     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubTwoForm');
 
-         return new WriteController(
+         return new AddtwoController(
              $placesService,
              $placesInsertForm
          );

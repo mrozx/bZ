@@ -1,5 +1,5 @@
 <?php
-//Filename: /module/Places/src/Places/Controller/WriteController.php
+//Filename: /module/Places/src/Places/Controller/AddtwoController.php
 namespace Places\Controller;
 
  use Places\Service\PlacesServiceInterface;
@@ -7,7 +7,7 @@ namespace Places\Controller;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
- class AddOneController extends AbstractActionController
+ class AddtwoController extends AbstractActionController
  {
      protected $placesService;
 

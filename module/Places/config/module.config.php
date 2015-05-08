@@ -33,8 +33,8 @@ return array(
 			 'Places\Controller\Addone' => 'Places\Factory\AddoneControllerFactory',
 			 'Places\Controller\Addtwo' => 'Places\Factory\AddtwoControllerFactory',
          ),
-		 'invokable' => array(
-             
+		 'invokables' => array(
+            
 			 'Places\Controller\Add' => 'Places\Controller\AddController',
 			
          ),

@@ -69,7 +69,7 @@ namespace Places\Controller;
 		}	
 			
 	public function loadform2Action() {	
-	
+	\Zend\Debug\Debug::dump("dsas");die();
 			$request = $this->getRequest();
 			if ($request->isPost()) {
 				 $this->placesFormTwo->setData($request->getPost());

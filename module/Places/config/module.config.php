@@ -29,7 +29,7 @@ return array(
      'controllers' => array(
          'factories' => array(
              'Places\Controller\Places' => 'Places\Factory\PlacesControllerFactory',
-			 // insert new place controller factory mapping
+			 
 			 'Places\Controller\Addone' => 'Places\Factory\AddoneControllerFactory',
 			 'Places\Controller\Addtwo' => 'Places\Factory\AddtwoControllerFactory',
          ),

@@ -68,7 +68,7 @@ namespace Places\Controller;
 			return $primaryView;
 		}	
 			
-	public function loadformoneAction() {	
+	public function loadformtwoAction() {	
 	
 			$request = $this->getRequest();
 			if ($request->isPost()) {

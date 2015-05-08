@@ -68,7 +68,7 @@ namespace Places\Controller;
 			return $primaryView;
 		}	
 			
-	public function loadform2Action() {	
+	public function loadform3Action() {	
 	\Zend\Debug\Debug::dump("dsas");die();
 			$request = $this->getRequest();
 			if ($request->isPost()) {

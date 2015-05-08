@@ -29,7 +29,7 @@ namespace Places\Controller;
 		 $this->placesFormTwo = $placesFormTwo;
      }
 	 
-	  public function loadformoneAction()
+	  public function loadform1Action()
      {
 		
 		$request = $this->getRequest();
@@ -68,7 +68,7 @@ namespace Places\Controller;
 			return $primaryView;
 		}	
 			
-	public function loadformtwoAction() {	
+	public function loadform2Action() {	
 	
 			$request = $this->getRequest();
 			if ($request->isPost()) {

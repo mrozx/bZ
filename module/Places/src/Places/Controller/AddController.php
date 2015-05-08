@@ -9,7 +9,7 @@ namespace Places\Controller;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
- class AddController extends AbstractActionController
+ class AddController // extends AbstractActionController
  {
     protected $places;
 

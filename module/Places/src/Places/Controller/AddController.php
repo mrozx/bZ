@@ -60,7 +60,7 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
-			 'nextstep' => $this->formStep + 1
+			 'nextstep' => $this->formStep 
 			 //'test' => $this->placesService->getName()
 			 ));
 			

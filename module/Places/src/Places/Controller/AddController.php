@@ -16,7 +16,7 @@ namespace Places\Controller;
     protected $placesService;
 	protected $placesFormOne;
 	protected $placesFormTwo;
-	static protected  $formStep = 1;
+	protected  $formStep;
 	
      public function __construct(
 		PlacesServiceInterface $placesService,
@@ -27,6 +27,7 @@ namespace Places\Controller;
          $this->placesService = $placesService;
 		 $this->placesFormOne = $placesFormOne;
 		 $this->placesFormTwo = $placesFormTwo;
+		 $this->formStep = 1;
      }
 	 
 	  public function loadformAction()

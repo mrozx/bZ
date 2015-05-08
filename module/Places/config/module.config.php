@@ -70,7 +70,7 @@ return array(
                              'route'    => 'add[/:step]',
                              'defaults' => array(
                                  'controller' => 'Places\Controller\Add',
-                                 'action'     => 'loadform1'
+                                 'action'     => 'loadform2'
 								),
 							 'constraints' => array(
 								 'step' => '[1-9]\d*'

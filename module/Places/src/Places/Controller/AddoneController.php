@@ -32,7 +32,7 @@ namespace Places\Controller;
              $this->placesForm->setData($request->getPost());
 
              if ($this->placesForm->isValid()) {
-                 try {
+                 
 					\Zend\Debug\Debug::dump($this->placesForm->getData());die();
                   //   $this->placesService->savePlace($this->placesForm->getData());
 

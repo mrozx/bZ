@@ -39,7 +39,7 @@ namespace Places\Controller;
 			}
 			
 		$primaryView = new ViewModel(array(
-		\Zend\Debug\Debug::dump($this->placesForm->getData());die();
+		'form' => \Zend\Debug\Debug::dump($this->placesForm->getData());die()
              //'form' => $this->placesForm,
 			 //'test' => $this->placesService->getName()
 			));

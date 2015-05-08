@@ -27,7 +27,7 @@ namespace Places\Controller;
 			$one = new PlacesAddSubOneForm(null,null);
 			$formOne = new AddoneController($this->placesService, $one);
 			return $formOne->addAction();
-			return 'test' => "dsd";
+			return 'test' -> "dsd";
 			}
 			
 		  if($id == 2) {

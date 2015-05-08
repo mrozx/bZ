@@ -27,6 +27,13 @@ namespace Places\Controller;
 			$formOne = new AddoneController($this->placesService, $one);
 			return $formOne->addAction();
 			}
+			
+		  if($id == 2) {
+			
+			$two = new PlacesAddSubTwoForm(null,null);
+			$formOne = new AddtwoController($this->placesService, $two);
+			return $formOne->addAction();
+			}
      }
  }
  

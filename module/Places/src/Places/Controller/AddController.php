@@ -76,28 +76,28 @@ namespace Places\Controller;
 		
 		if($this->formStep == 2) {
 			$request = $this->getRequest();
-		if ($request->isPost()) {
-	         $this->placesFormOne->setData($request->getPost());
+			if ($request->isPost()) {
+				 $this->placesFormTwo->setData($request->getPost());
 
-             if ($this->placesFormOne->isValid()) {
-                 try {
-					\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
-                  //   $this->placesService->savePlace($this->placesFormOne->getData());
-				   $this->formStep = 3;
-					$primaryView = new ViewModel(array(
-                    'test' => $this->formStep
-					//'test' => $this->placesService->getName()
-					));
+				 if ($this->placesFormTwo->isValid()) {
+					 try {
+						\Zend\Debug\Debug::dump($this->placesFormTwo->getData());die();
+					  //   $this->placesService->savePlace($this->placesFormTwo->getData());
+					   $this->formStep = 3;
+						$primaryView = new ViewModel(array(
+						'test' => $this->formStep
+						//'test' => $this->placesService->getName()
+						));
+				
+						$primaryView->setTemplate('write/add1');
+						return $primaryView;
+					 } catch (\Exception $e) {
+						 // Some DB Error happened, log it and let the user know
+					 }
+				 }
+			 }
 			
-					$primaryView->setTemplate('write/add1');
-					return $primaryView;
-                 } catch (\Exception $e) {
-                     // Some DB Error happened, log it and let the user know
-                 }
-             }
-         }
-			
-			}
+		}
 		 
 		$request = $this->getRequest();
 		if ($request->isPost()) {

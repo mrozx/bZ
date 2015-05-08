@@ -73,7 +73,7 @@ namespace Places\Controller;
 		 
 		$primaryView = new ViewModel(array(
 		
-             //'form' => $this->placesForm,
+             'form' => $this->placesFormOne,
 			 //'test' => $this->placesService->getName()
 			));
 			

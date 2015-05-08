@@ -2,21 +2,21 @@
 	
 namespace Places\Controller;
 
- use Places\Model\PlacesInterface;
+ use Places\Service\PlacesServiceInterface;
  use Places\Controller\AddoneController;
  use Places\Form\PlacesAddSubOneForm;
  use Places\Form\PlacesAddSubTwoForm;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
- class AddController  extends AbstractActionController
+ class AddController extends AbstractActionController
  {
     protected $places;
 
-     // public function __construct(PlacesInterface $places)
-     // {
-         // $this->places = $places;
-     // }
+     public function __construct(PlacesInterface $places)
+     {
+         $this->places = $places;
+     }
 	 
 	  public function loadformAction()
      {

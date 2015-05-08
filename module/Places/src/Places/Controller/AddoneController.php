@@ -27,9 +27,7 @@ namespace Places\Controller;
 		 $request = $this->getRequest();
 	
          if ($request->isPost()) {
-			var_dump("dsaasd");
-			exit;
-             $this->placesForm->setData($request->getPost());
+	          $this->placesForm->setData($request->getPost());
 
              if ($this->placesForm->isValid()) {
                  try {

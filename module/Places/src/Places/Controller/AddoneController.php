@@ -26,7 +26,7 @@ namespace Places\Controller;
 		 $this->placesService->setName("shalom");
 		  $primaryView = new ViewModel(array(
              'form' => $this->placesForm,
-			 'test' => "sds"
+			 'test' => $this->placesService->getName();
 			));
 		$primaryView->setTemplate('write/add');
 			return $primaryView;

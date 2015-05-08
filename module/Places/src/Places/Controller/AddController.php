@@ -34,7 +34,7 @@ namespace Places\Controller;
 		
         //$id = $this->params()->fromRoute('step');
 		$this->formStep = 1;
-		//if($id == 1) {
+		
 		
 		$request = $this->getRequest();
 		if ($request->isPost()) {
@@ -58,7 +58,8 @@ namespace Places\Controller;
                  }
              }
          }
-		
+		 
+		if($this->formStep == 1) {
 			// $one = new PlacesAddSubOneForm(null,null);
 			// $formOne = new AddoneController($this->placesService, $one);
 			// return $formOne->addAction();
@@ -67,11 +68,35 @@ namespace Places\Controller;
 			 //'test' => $this->placesService->getName()
 			 ));
 			
-		$primaryView->setTemplate('write/add');
+			$primaryView->setTemplate('write/add');
 			return $primaryView;
 			
-		//	}
+			}
 		
+		if($this->formStep == 2) {
+			$request = $this->getRequest();
+		if ($request->isPost()) {
+	         $this->placesFormOne->setData($request->getPost());
+
+             if ($this->placesFormOne->isValid()) {
+                 try {
+					\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
+                  //   $this->placesService->savePlace($this->placesFormOne->getData());
+				  $this->formStep = 3;
+					$primaryView = new ViewModel(array(
+                    'test' => $this->formStep
+					//'test' => $this->placesService->getName()
+					));
+			
+					$primaryView->setTemplate('write/add');
+					return $primaryView;
+                 } catch (\Exception $e) {
+                     // Some DB Error happened, log it and let the user know
+                 }
+             }
+         }
+			
+			}
 		 
 		$request = $this->getRequest();
 		if ($request->isPost()) {

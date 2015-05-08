@@ -24,8 +24,8 @@ namespace Places\Controller;
              // 'form' => "dsds"
 			// ));
 		// $primaryView->setTemplate('write/add');
-		$formOne = new AddoneController;
-			return $formOne->addAction($placesService);
+		$formOne = new AddoneController($placesService);
+			return $formOne->addAction();
 			}
      }
  }

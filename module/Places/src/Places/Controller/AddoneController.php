@@ -40,7 +40,7 @@ namespace Places\Controller;
 		$primaryView = new ViewModel(array(
              'form' => $this->placesForm
 			));
-		$primaryView->setTemplate('write/addss');
+		$primaryView->setTemplate('write/add');
 			return $primaryView;
 		  }	
 		  

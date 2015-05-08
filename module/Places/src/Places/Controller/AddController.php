@@ -24,7 +24,7 @@ namespace Places\Controller;
 		
         $id = $this->params()->fromRoute('step');
 		  if($id == 1) {
-			$place = new place();
+			$place = new places();
 			$one = new PlacesAddSubOneForm(null,null);
 			$formOne = new AddoneController($this->placesService, $one);
 			return $formOne->addAction();

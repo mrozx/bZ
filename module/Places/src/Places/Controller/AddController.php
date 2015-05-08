@@ -3,6 +3,7 @@
 namespace Places\Controller;
 
  use Places\Service\PlacesServiceInterface;
+  use Places\Controller\AddoneController;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 

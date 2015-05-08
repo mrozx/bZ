@@ -33,6 +33,11 @@ return array(
 			 'Places\Controller\Addone' => 'Places\Factory\AddoneControllerFactory',
 			 'Places\Controller\Addtwo' => 'Places\Factory\AddtwoControllerFactory',
          ),
+		 'invokable' => array(
+             
+			 'Places\Controller\Add' => 'Places\Controller\AddController',
+			
+         ),
      ),
 	 
 	 // This lines opens the configuration for the RouteManager

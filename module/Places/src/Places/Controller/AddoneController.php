@@ -26,8 +26,8 @@ namespace Places\Controller;
 
 		 $request = $this->getRequest();
 		
-         if ($request->isPost()) {
-             $this->placesForm->setData($request->getPost());
+    //     if ($request->isPost()) {
+           //  $this->placesForm->setData($request->getPost());
 
              //if ($this->placesForm->isValid()) {
                  try {
@@ -52,5 +52,5 @@ namespace Places\Controller;
 		$primaryView->setTemplate('write/add');
 			return $primaryView;
 		  	
-     }
+     //}
  }

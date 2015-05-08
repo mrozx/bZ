@@ -23,6 +23,7 @@ namespace Places\Controller;
      {
 		
         $id = $this->params()->fromRoute('step');
+		
 		  if($id == 1) {
 			$one = new PlacesAddSubOneForm(null,null);
 			$formOne = new AddoneController($this->placesService, $one);
@@ -33,8 +34,8 @@ namespace Places\Controller;
 		  if($id == 2) {
 			
 			$two = new PlacesAddSubTwoForm(null,null);
-			$formOne = new AddtwoController($this->placesService, $two);
-			return $formOne->addAction();
+			$formTwo = new AddtwoController($this->placesService, $two);
+			return $formTwo->addAction();
 			}
      }
  }

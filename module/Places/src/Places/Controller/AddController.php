@@ -35,7 +35,7 @@ namespace Places\Controller;
         //$id = $this->params()->fromRoute('step');
 		$this->formStep = 1;
 		
-		
+		if($this->formStep == 1) {
 		$request = $this->getRequest();
 		if ($request->isPost()) {
 	         $this->placesFormOne->setData($request->getPost());
@@ -59,7 +59,7 @@ namespace Places\Controller;
              }
          }
 		 
-		if($this->formStep == 1) {
+		
 			// $one = new PlacesAddSubOneForm(null,null);
 			// $formOne = new AddoneController($this->placesService, $one);
 			// return $formOne->addAction();

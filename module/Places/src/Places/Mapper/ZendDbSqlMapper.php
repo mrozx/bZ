@@ -116,4 +116,13 @@
 
       throw new \Exception("Database error");
 	}
+	
+	 public function getName() {
+			 $this->placesPrototype->getName();
+		}
+	 
+	 public function setName($text){
+			$this->placesPrototype->setName($text);
+		}
+	 
  }

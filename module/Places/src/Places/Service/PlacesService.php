@@ -47,4 +47,14 @@
      {
          return $this->placesMapper->save($places);
      }
+	 
+	 public function setName($test) {
+			$this->placesMapper->setName($test);
+		}
+	
+	 public function getName() {
+			return $this->placesMapper->getName();
+		}
+	 
+	 
  }

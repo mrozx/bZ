@@ -34,7 +34,7 @@
              'type' => 'submit',
              'name' => 'submit',
 			 'options' => array(	
-				 'label' => 'next',
+			//	 'label' => 'next',
 			 ),
              'attributes' => array(
                  'value' => 'go to step 2'

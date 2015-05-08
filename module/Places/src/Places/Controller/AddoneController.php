@@ -53,4 +53,5 @@ namespace Places\Controller;
 			return $primaryView;
 		  	
      //}
+	 }
  }

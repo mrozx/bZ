@@ -30,8 +30,8 @@ return array(
          'factories' => array(
              'Places\Controller\Places' => 'Places\Factory\PlacesControllerFactory',
 			 'Places\Controller\Add' => 'Places\Factory\AddControllerFactory',
-			 'Places\Controller\Addone' => 'Places\Factory\AddoneControllerFactory',
-			 'Places\Controller\Addtwo' => 'Places\Factory\AddtwoControllerFactory',
+			 //'Places\Controller\Addone' => 'Places\Factory\AddoneControllerFactory',
+			 //'Places\Controller\Addtwo' => 'Places\Factory\AddtwoControllerFactory',
          ),
      ),
 	 

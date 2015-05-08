@@ -7,14 +7,16 @@ namespace Places\Controller;
  use Places\Controller\AddoneController;
 // use Places\Form\PlacesAddSubOneForm;
 // use Places\Form\PlacesAddSubTwoForm;
-  use Zend\Form\FormInterface;
+ use Zend\Form\FormInterface;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
  class AddController extends AbstractActionController
  {
     protected $placesService;
-	 protected $placesFormOne;
+	protected $placesFormOne;
+	protected $placesFormTwo;
+	protected $formStep;
 	
      public function __construct(
 		PlacesServiceInterface $placesService,
@@ -31,7 +33,7 @@ namespace Places\Controller;
      {
 		
         //$id = $this->params()->fromRoute('step');
-		
+		$this->formStep = 1;
 		//if($id == 1) {
 		
 		$request = $this->getRequest();
@@ -42,8 +44,10 @@ namespace Places\Controller;
                  try {
 				//	\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
+				  $this->formStep = 2;
 					$primaryView = new ViewModel(array(
-             'form' => $this->placesFormTwo,
+                    'form' => $this->placesFormTwo,
+					'test' => $this->formStep
 			 //'test' => $this->placesService->getName()
 			 ));
 			

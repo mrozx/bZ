@@ -14,7 +14,8 @@
              'name' => 'places-fieldset',
              'type' => 'Places\Form\PlacesAddSubOneFieldset',
 			 'options' => array(
-                 'use_as_base_fieldset' => true
+                 'use_as_base_fieldset' => true,
+				 'step'=> 1
              )
          ));
 		

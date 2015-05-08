@@ -14,7 +14,7 @@
          $placesService        = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
          $placesInsertForm     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubOneForm');
 
-         return new AddoneController(
+         return new AddoneController (
              $placesService,
              $placesInsertForm
          );

@@ -14,7 +14,7 @@
          $placesService        = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
          $placesInsertForm     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubTwoForm');
 
-         return new AddtwoController(
+         return new AddtwoController (
              $placesService,
              $placesInsertForm
          );

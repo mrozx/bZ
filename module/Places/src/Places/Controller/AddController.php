@@ -55,12 +55,12 @@ namespace Places\Controller;
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
 			 //'test' => $this->placesService->getName()
-			));
+			 ));
 			
 		$primaryView->setTemplate('write/add');
 			return $primaryView;
 			
-			}
+		//	}
 		
 		 
 		$request = $this->getRequest();

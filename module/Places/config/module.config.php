@@ -65,7 +65,7 @@ return array(
                              'route'    => 'add[/:step]',
                              'defaults' => array(
                                  'controller' => 'Places\Controller\Add',
-                                 'action'     => 'loadForm'
+                                 'action'     => 'loadform'
 								),
 							 'constraints' => array(
 								 'step' => '[1-9]\d*'

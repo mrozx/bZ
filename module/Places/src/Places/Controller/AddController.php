@@ -76,7 +76,7 @@ namespace Places\Controller;
 
              if ($this->placesFormOne->isValid()) {
                  try {
-					\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
+					//\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
 
                    
@@ -86,6 +86,7 @@ namespace Places\Controller;
                  }
              }
          }
+		 
 		$primaryView = new ViewModel(array(
 		
              'form' => $this->placesFormOne,

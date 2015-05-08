@@ -29,13 +29,9 @@ namespace Places\Controller;
 		 $this->placesFormTwo = $placesFormTwo;
      }
 	 
-	  public function loadformAction()
+	  public function loadformoneAction()
      {
 		
-        $id = $this->params()->fromRoute('step');
-		//$this->formStep = 1;
-		
-		if($id == 1) {
 		$request = $this->getRequest();
 		if ($request->isPost()) {
 	         $this->placesFormOne->setData($request->getPost());
@@ -45,14 +41,13 @@ namespace Places\Controller;
 					//\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
 				  $this->formStep = 2;
-					$primaryView = new ViewModel(array(
+				  $primaryView = new ViewModel(array(
                     'form' => $this->placesFormTwo,
-					'test' => $this->formStep
-			 //'test' => $this->placesService->getName()
-			 ));
-			
-			$primaryView->setTemplate('write/add');
-			return $primaryView;
+					'nextstep' => $this->formStep + 1
+					));
+				   $primaryView->setTemplate('write/add');
+				   return $primaryView;
+					
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know
                  }
@@ -65,16 +60,16 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
-			 'test' => $this->formStep
+			 'nextstep' => $this->formStep + 1
 			 //'test' => $this->placesService->getName()
 			 ));
 			
 			$primaryView->setTemplate('write/add');
 			return $primaryView;
+		}	
 			
-			}
-		
-		if($id == 2) {
+	public function loadformoneAction() {	
+	
 			$request = $this->getRequest();
 			if ($request->isPost()) {
 				 $this->placesFormTwo->setData($request->getPost());
@@ -85,7 +80,7 @@ namespace Places\Controller;
 					  //   $this->placesService->savePlace($this->placesFormTwo->getData());
 					   $this->formStep = 3;
 						$primaryView = new ViewModel(array(
-						'test' => $this->formStep
+						'nextstep' => $this->formStep + 1
 						//'test' => $this->placesService->getName()
 						));
 				
@@ -97,32 +92,8 @@ namespace Places\Controller;
 				 }
 			 }
 			
-		}
-		 $primaryView = new ViewModel(array(
-					//	'test' => $this->formStep
-						//'test' => $this->placesService->getName()
-						));
-				
-						$primaryView->setTemplate('write/add');
-						return $primaryView;
-		$request = $this->getRequest();
-		if ($request->isPost()) {
-	         $this->placesFormOne->setData($request->getPost());
-
-             if ($this->placesFormOne->isValid()) {
-                 try {
-					\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
-                  //   $this->placesService->savePlace($this->placesFormOne->getData());
-
-                   
-				//	return $this->redirect()->toRoute('add/2');
-                 } catch (\Exception $e) {
-                     // Some DB Error happened, log it and let the user know
-                 }
-             }
-         }
-		 
 		
+
      }
  }
  

@@ -1,9 +1,9 @@
  <!-- Filename: /module/Blog/view/blog/write/add.phtml -->
- <h1>1 step</h1>
+ <h1>step</h1>
    <?php
   
  $form = $this->form;
- $form->setAttribute('action', $this->url(null, array('id' => 2)));
+ $form->setAttribute('action', $this->url(null, array('action' => '')));
  $form->prepare();
 
  echo $this->form()->openTag($form);
@@ -12,4 +12,4 @@
 
  echo $this->form()->closeTag();
  
-echo $this->test;
+echo $this->nextstep;

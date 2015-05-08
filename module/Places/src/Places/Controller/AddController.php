@@ -16,7 +16,7 @@ namespace Places\Controller;
     protected $placesService;
 	protected $placesFormOne;
 	protected $placesFormTwo;
-	protected $formStep;
+	protected $formStep = 1;
 	
      public function __construct(
 		PlacesServiceInterface $placesService,
@@ -43,7 +43,7 @@ namespace Places\Controller;
 				  $this->formStep = 1;
 				  $primaryView = new ViewModel(array(
                     'form' => $this->placesFormTwo,
-					'nextstep' => $this->formStep + 1
+					'nextstep' => $this->formStep + 2
 					));
 				   $primaryView->setTemplate('write/add');
 				   return $primaryView;

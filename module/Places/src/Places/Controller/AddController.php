@@ -42,7 +42,13 @@ namespace Places\Controller;
                  try {
 				//	\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
-					
+					$primaryView = new ViewModel(array(
+             'form' => $this->placesFormTwo,
+			 //'test' => $this->placesService->getName()
+			 ));
+			
+			$primaryView->setTemplate('write/add');
+			return $primaryView;
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know
                  }

@@ -1,5 +1,6 @@
 <?php
  // Filename: /module/Places/src/Places/Factory/AddoneControllerFactory.php
+ 
  namespace Places\Factory;
 
  use Places\Controller\AddoneController;

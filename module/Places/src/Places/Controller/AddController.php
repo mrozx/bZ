@@ -29,7 +29,7 @@ namespace Places\Controller;
 		 $this->placesFormTwo = $placesFormTwo;
      }
 	 
-	  public function loadform1Action()
+	  public function loadform2Action()
      {
 		
 		$request = $this->getRequest();
@@ -60,7 +60,7 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
-			 'nextstep' => $this->formStep 
+			 'nextstep' => $this->formStep + 1
 			 //'test' => $this->placesService->getName()
 			 ));
 			

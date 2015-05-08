@@ -30,7 +30,7 @@ namespace Places\Controller;
              'form' => $this->placesForm
 			));
 		$primaryView->setTemplate('write/add');
-			return $primaryView
+			return $primaryView;
 		  }	
          
 		 

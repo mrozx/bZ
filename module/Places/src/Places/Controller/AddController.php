@@ -32,10 +32,10 @@ namespace Places\Controller;
 	  public function loadformAction()
      {
 		
-        //$id = $this->params()->fromRoute('step');
+        $id = $this->params()->fromRoute('step');
 		//$this->formStep = 1;
 		
-		if($this->formStep == 1) {
+		if($id == 1) {
 		$request = $this->getRequest();
 		if ($request->isPost()) {
 	         $this->placesFormOne->setData($request->getPost());
@@ -74,7 +74,7 @@ namespace Places\Controller;
 			
 			}
 		
-		if($this->formStep == 2) {
+		if($id == 2) {
 			$request = $this->getRequest();
 			if ($request->isPost()) {
 				 $this->placesFormTwo->setData($request->getPost());

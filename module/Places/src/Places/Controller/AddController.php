@@ -27,7 +27,7 @@ namespace Places\Controller;
         $id = $this->params()->fromRoute('step');
 		
 		  if($id == 1) {
-		  
+		if($formOne)  {
 		$request = $formOne->getRequest();
 		if ($request->isPost()) {
 	         $formOne->placesForm->setData($request->getPost());
@@ -50,7 +50,7 @@ namespace Places\Controller;
 			return $formOne->addAction();
 			
 			}
-			
+			}
 		  if($id == 2) {
 			
 			$two = new PlacesAddSubTwoForm(null,null);

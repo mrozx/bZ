@@ -70,7 +70,7 @@ namespace Places\Controller;
 			return $formTwo->addAction();
 			}
 		 
-		 
+		 \Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
 		$primaryView = new ViewModel(array(
 		
              'form' => $this->placesFormOne,

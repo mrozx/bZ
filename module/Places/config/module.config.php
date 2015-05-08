@@ -64,7 +64,7 @@ return array(
                          'options' => array(
                              'route'    => 'add[/:step]',
                              'defaults' => array(
-                                 'controller' => 'Places\Controller\Write',
+                                 'controller' => 'Places\Controller\AddOne',
                                  'action'     => 'add'
 								),
 							 'constraints' => array(

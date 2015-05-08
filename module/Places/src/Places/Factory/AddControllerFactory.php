@@ -6,7 +6,7 @@
  use Zend\ServiceManager\FactoryInterface;
  use Zend\ServiceManager\ServiceLocatorInterface;
 
- class PlacesControllerFactory implements FactoryInterface
+ class AddControllerFactory implements FactoryInterface
  {
      /**
       * Create service

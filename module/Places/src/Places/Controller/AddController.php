@@ -40,7 +40,7 @@ namespace Places\Controller;
                  try {
 					//\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
-				  $this->formStep = 2;
+				  $this->formStep = 1;
 				  $primaryView = new ViewModel(array(
                     'form' => $this->placesFormTwo,
 					'nextstep' => $this->formStep + 1

@@ -30,7 +30,7 @@ namespace Places\Controller;
 	  public function loadformAction()
      {
 		
-        //$id = $this->params()->fromRoute('step');
+        $id = $this->params()->fromRoute('step');
 		
 		if($id == 1) {
 		

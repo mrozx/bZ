@@ -40,10 +40,10 @@ namespace Places\Controller;
                  try {
 					//\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
-				  $this->formStep = 1;
+				  $this->formStep = 2;
 				  $primaryView = new ViewModel(array(
                     'form' => $this->placesFormTwo,
-					'nextstep' => $this->formStep + 2
+					'nextstep' => $this->formStep + 1
 					));
 				   $primaryView->setTemplate('write/add');
 				   return $primaryView;
@@ -68,7 +68,7 @@ namespace Places\Controller;
 			return $primaryView;
 		}	
 			
-	public function loadform3Action() {	
+	public function loadform2Action() {	
 	\Zend\Debug\Debug::dump("dsas");die();
 			$request = $this->getRequest();
 			if ($request->isPost()) {

@@ -23,16 +23,14 @@ namespace Places\Controller;
 
      public function addAction()
      {
-		 
-         
-		  
+
 		 $request = $this->getRequest();
-		try {
+		
          if ($request->isPost()) {
              $this->placesForm->setData($request->getPost());
 
              if ($this->placesForm->isValid()) {
-                 
+                 try {
 					\Zend\Debug\Debug::dump($this->placesForm->getData());die();
                   //   $this->placesService->savePlace($this->placesForm->getData());
 

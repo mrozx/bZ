@@ -37,6 +37,14 @@ namespace Places\Controller;
 			$formTwo = new AddtwoController($this->placesService, $two);
 			return $formTwo->addAction();
 			}
+			
+		$primaryView = new ViewModel(array(
+             //'form' => $this->placesForm,
+			 //'test' => $this->placesService->getName()
+			));
+			
+		$primaryView->setTemplate('write/add');
+			return $primaryView;
      }
  }
  

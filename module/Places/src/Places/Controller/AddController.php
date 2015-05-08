@@ -17,7 +17,7 @@ namespace Places\Controller;
 	 
 	  public function loadForm()
      {
-         $id = $this->params()->fromRoute('step');
+      //   $id = $this->params()->fromRoute('step');
 		  // if($id == 1) {
 			  // $primaryView = new ViewModel(array(
              // 'form' => "dsds"

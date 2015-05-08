@@ -25,10 +25,13 @@ namespace Places\Controller;
      {
 		 
 		  $id = $this->params()->fromRoute('step');
-		  if($id == 1) {
-			return new ViewModel(array(
+		  if($id == 2) {
+		$primaryView = new ViewModel(array(
              'form' => $this->placesForm
 			));
+		$primaryView->setTemplate('write/add');
+			return $primaryView;
+		  }	
 		  }	
          
 		 

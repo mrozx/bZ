@@ -1,12 +1,12 @@
 <?php
- // Filename: /module/Places/src/Places/Factory/AddOneControllerFactory.php
+ // Filename: /module/Places/src/Places/Factory/AddoneControllerFactory.php
  namespace Places\Factory;
 
  use Places\Controller\AddoneController;
  use Zend\ServiceManager\FactoryInterface;
  use Zend\ServiceManager\ServiceLocatorInterface;
 
- class AddOneControllerFactory implements FactoryInterface
+ class AddoneControllerFactory implements FactoryInterface
  {
      public function createService(ServiceLocatorInterface $serviceLocator)
      {

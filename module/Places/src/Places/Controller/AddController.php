@@ -18,7 +18,7 @@ namespace Places\Controller;
 	 
 	  public function loadformAction()
      {
-		$placesS = $this->$placesService;
+		$placesS = $placesService;
         $id = $this->params()->fromRoute('step');
 		  if($id == 1) {
 			  // $primaryView = new ViewModel(array(

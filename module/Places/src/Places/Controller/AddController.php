@@ -98,7 +98,13 @@ namespace Places\Controller;
 			 }
 			
 		}
-		 
+		 $primaryView = new ViewModel(array(
+					//	'test' => $this->formStep
+						//'test' => $this->placesService->getName()
+						));
+				
+						$primaryView->setTemplate('write/add');
+						return $primaryView;
 		$request = $this->getRequest();
 		if ($request->isPost()) {
 	         $this->placesFormOne->setData($request->getPost());

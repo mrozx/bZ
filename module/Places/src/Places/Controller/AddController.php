@@ -5,6 +5,7 @@ namespace Places\Controller;
  use Places\Service\PlacesServiceInterface;
  use Places\Controller\AddoneController;
  use Places\Form\PlacesAddSubOneForm;
+ use Places\Form\PlacesAddSubTwoForm;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 

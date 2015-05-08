@@ -19,7 +19,7 @@ namespace Places\Controller;
      {
          $id = $this->params()->fromRoute('step');
 		  if($id == 1) {
-		//	return new AddoneController;
+				echo "dsds";
 			}
      }
  }

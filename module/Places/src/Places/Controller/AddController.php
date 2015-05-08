@@ -11,11 +11,11 @@ namespace Places\Controller;
 
  class AddController extends AbstractActionController
  {
-    protected $placesService;
+    protected $places;
 
-     public function __construct(PlacesServiceInterface $placesService)
+     public function __construct(PlacesInterface $places)
      {
-         $this->placesService = $placesService;
+         $this->places = $places;
      }
 	 
 	  public function loadformAction()
@@ -25,14 +25,14 @@ namespace Places\Controller;
 		  if($id == 1) {
 			
 			$one = new PlacesAddSubOneForm(null,null);
-			$formOne = new AddoneController($this->placesService, $one);
+			$formOne = new AddoneController($this->places, $one);
 			return $formOne->addAction();
 			}
 			
 		  if($id == 2) {
 			
 			$two = new PlacesAddSubTwoForm(null,null);
-			$formOne = new AddtwoController($this->placesService, $two);
+			$formOne = new AddtwoController($this->places, $two);
 			return $formOne->addAction();
 			}
      }

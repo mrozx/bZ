@@ -25,7 +25,7 @@ namespace Places\Controller;
      {
 		 
 		  $primaryView = new ViewModel(array(
-             'form' => $this->placesForm,
+             'form' => $this->placesForm 
 			 'test' => "sds"
 			));
 		$primaryView->setTemplate('write/add');

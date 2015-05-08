@@ -2,7 +2,7 @@
  // Filename: /module/Places/src/Places/Factory/AddOneControllerFactory.php
  namespace Places\Factory;
 
- use Places\Controller\WriteController;
+ use Places\Controller\AddOneController.php;
  use Zend\ServiceManager\FactoryInterface;
  use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -14,7 +14,7 @@
          $placesService        = $realServiceLocator->get('Places\Service\PlacesServiceInterface');
          $placesInsertForm     = $realServiceLocator->get('FormElementManager')->get('Places\Form\PlacesAddSubOneForm');
 
-         return new WriteController(
+         return new AddOneController(
              $placesService,
              $placesInsertForm
          );

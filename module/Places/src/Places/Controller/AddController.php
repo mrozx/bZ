@@ -18,13 +18,13 @@ namespace Places\Controller;
 	  public function loadForm()
      {
          $id = $this->params()->fromRoute('step');
-		  if($id == 1) {
-			  $primaryView = new ViewModel(array(
-             'form' => "dsds"
-			));
-		$primaryView->setTemplate('write/add');
-			return $primaryView;
-			}
+		  // if($id == 1) {
+			  // $primaryView = new ViewModel(array(
+             // 'form' => "dsds"
+			// ));
+		// $primaryView->setTemplate('write/add');
+			// return $primaryView;
+			// }
      }
  }
  

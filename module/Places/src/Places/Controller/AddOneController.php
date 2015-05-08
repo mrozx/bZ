@@ -42,7 +42,7 @@ namespace Places\Controller;
 					\Zend\Debug\Debug::dump($this->placesForm->getData());die();
                   //   $this->placesService->savePlace($this->placesForm->getData());
 
-                     return $this->redirect()->toRoute('add/2');
+                     //return $this->redirect()->toRoute('add/2');
                  } catch (\Exception $e) {
                      // Some DB Error happened, log it and let the user know
                  }

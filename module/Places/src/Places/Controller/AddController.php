@@ -13,10 +13,12 @@ namespace Places\Controller;
  class AddController extends AbstractActionController
  {
     protected $placesService;
-
+	
+	
      public function __construct(PlacesServiceInterface $placesService)
      {
          $this->placesService = $placesService;
+		 
      }
 	 
 	  public function loadformAction()
@@ -26,13 +28,13 @@ namespace Places\Controller;
 		
 		  if($id == 1) {
 		  
-		  $request = $this->getRequest();
+		$request = $formOne->getRequest();
 		if ($request->isPost()) {
-	          $this->placesForm->setData($request->getPost());
+	         $formOne->placesForm->setData($request->getPost());
 
-             if ($this->placesForm->isValid()) {
+             if ($formOne->placesForm->isValid()) {
                  try {
-					\Zend\Debug\Debug::dump($this->placesForm->getData());die();
+					\Zend\Debug\Debug::dump($formOne->placesForm->getData());die();
                   //   $this->placesService->savePlace($this->placesForm->getData());
 
                    

@@ -25,19 +25,8 @@ namespace Places\Controller;
         $id = $this->params()->fromRoute('step');
 		
 		  if($id == 1) {
-			$one = new PlacesAddSubOneForm(null,null);
-			$formOne = new AddoneController($this->placesService, $one);
-			return $formOne->addAction();
-			
-			}
-			
-		  if($id == 2) {
-			
-			$two = new PlacesAddSubTwoForm(null,null);
-			$formTwo = new AddtwoController($this->placesService, $two);
-			return $formTwo->addAction();
-			}
-		 $request = $this->getRequest();
+		  
+		  $request = $this->getRequest();
 		if ($request->isPost()) {
 	          $this->placesForm->setData($request->getPost());
 
@@ -53,6 +42,20 @@ namespace Places\Controller;
                  }
              }
          }
+		 
+			$one = new PlacesAddSubOneForm(null,null);
+			$formOne = new AddoneController($this->placesService, $one);
+			return $formOne->addAction();
+			
+			}
+			
+		  if($id == 2) {
+			
+			$two = new PlacesAddSubTwoForm(null,null);
+			$formTwo = new AddtwoController($this->placesService, $two);
+			return $formTwo->addAction();
+			}
+		 
 		 
 		$primaryView = new ViewModel(array(
 		

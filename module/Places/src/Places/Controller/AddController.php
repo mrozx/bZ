@@ -15,7 +15,7 @@ namespace Places\Controller;
          $this->placesService = $placesService;
      }
 	 
-	  public function loadForm()
+	  public function loadFormAction()
      {
       //   $id = $this->params()->fromRoute('step');
 		  // if($id == 1) {

@@ -28,7 +28,7 @@ namespace Places\Controller;
 		// $primaryView->setTemplate('write/add');
 		$one = new PlacesAddSubOneForm(null,null);
 		$formOne = new AddoneController($this->placesService, $one);
-			return $formOne->addAction();
+			//return $formOne->addAction();
 			}
      }
  }

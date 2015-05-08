@@ -16,7 +16,7 @@ namespace Places\Controller;
     protected $placesService;
 	protected $placesFormOne;
 	protected $placesFormTwo;
-	protected static $formStep = 1;
+	static protected  $formStep = 1;
 	
      public function __construct(
 		PlacesServiceInterface $placesService,

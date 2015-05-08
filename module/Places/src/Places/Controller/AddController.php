@@ -65,6 +65,7 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
+			 'test' => $this->formStep
 			 //'test' => $this->placesService->getName()
 			 ));
 			
@@ -82,7 +83,7 @@ namespace Places\Controller;
                  try {
 					\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
-				  $this->formStep = 3;
+				   $this->formStep = 3;
 					$primaryView = new ViewModel(array(
                     'test' => $this->formStep
 					//'test' => $this->placesService->getName()

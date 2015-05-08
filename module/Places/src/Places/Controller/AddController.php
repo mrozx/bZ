@@ -16,7 +16,7 @@ namespace Places\Controller;
     protected $placesService;
 	protected $placesFormOne;
 	protected $placesFormTwo;
-	protected $formStep;
+	protected $formStep = 1;
 	
      public function __construct(
 		PlacesServiceInterface $placesService,
@@ -33,7 +33,7 @@ namespace Places\Controller;
      {
 		
         //$id = $this->params()->fromRoute('step');
-		$this->formStep = 1;
+		//$this->formStep = 1;
 		
 		if($this->formStep == 1) {
 		$request = $this->getRequest();

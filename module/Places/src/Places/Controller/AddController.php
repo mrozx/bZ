@@ -22,7 +22,7 @@ namespace Places\Controller;
 		)
      {
          $this->placesService = $placesService;
-		 $this->placesFormOne = $placesForm;
+		 $this->placesFormOne = $placesFormOne;
 		 
      }
 	 
@@ -33,13 +33,13 @@ namespace Places\Controller;
 		
 		if($id == 1) {
 		
-		$request = $formOne->getRequest();
+		$request = $this->getRequest();
 		if ($request->isPost()) {
-	         $formOne->placesFormOne->setData($request->getPost());
+	         $this->placesFormOne->setData($request->getPost());
 
-             if ($formOne->placesFormOne->isValid()) {
+             if ($this->placesFormOne->isValid()) {
                  try {
-					\Zend\Debug\Debug::dump($formOne->placesFormOne->getData());die();
+					\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
 
                    

@@ -27,7 +27,6 @@ namespace Places\Controller;
          $this->placesService = $placesService;
 		 $this->placesFormOne = $placesFormOne;
 		 $this->placesFormTwo = $placesFormTwo;
-		 $this->formStep = 1;
      }
 	 
 	  public function loadformAction()

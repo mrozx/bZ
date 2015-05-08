@@ -4,7 +4,7 @@ namespace Places\Controller;
 
  use Places\Service\PlacesServiceInterface;
   use Places\Controller\AddoneController;
-   // use Places\Form\PlacesAddSubOneForm;
+    use Places\Form\PlacesAddSubOneForm;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
 
@@ -26,7 +26,7 @@ namespace Places\Controller;
              // 'form' => "dsds"
 			// ));
 		// $primaryView->setTemplate('write/add');
-			$one = new Places\Form\PlacesAddSubOneForm(null,null);
+			$one = new PlacesAddSubOneForm(null,null);
 			$formOne = new AddoneController($this->placesService, $one);
 			return $formOne->addAction();
 			}

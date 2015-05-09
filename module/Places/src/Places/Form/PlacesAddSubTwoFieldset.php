@@ -43,9 +43,9 @@ class PlacesAddSubTwoFieldset extends Fieldset
 	  
 	     $this->add(array(
          'type' => 'text',
-         'name' => 'streeNo',
+         'name' => 'streetNo',
          'options' => array(
-           'label' => 'streeNo'
+           'label' => 'streetNo'
          )
       ));
 	  

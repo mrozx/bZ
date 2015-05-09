@@ -64,9 +64,9 @@ namespace Places\Controller;
 		if($form_session->step == 2) {
 		$request = $this->getRequest();
 		if ($request->isPost()) {
-	         $this->placesFormOne->setData($request->getPost());
+	         $this->placesFormTwo->setData($request->getPost());
 						 
-             if ($this->placesFormOne->isValid()) {
+             if ($this->placesFormTwo->isValid()) {
                  try {
 				// \Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());

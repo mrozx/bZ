@@ -89,7 +89,7 @@ namespace Places\Controller;
 			// $formOne = new AddoneController($this->placesService, $one);
 			// return $formOne->addAction();
 			$form_session->step = 1;
-			$form_session->dataArray = new array();
+			$form_session->dataArray = array();
 			
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,

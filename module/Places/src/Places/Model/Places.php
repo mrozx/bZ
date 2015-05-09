@@ -28,6 +28,26 @@
       */
      protected $web;
 	 
+	  /**
+      * @var string
+      */
+     protected $province;
+	 
+	  /**
+      * @var string
+      */
+     protected $city;
+	 
+	  /**
+      * @var string
+      */
+     protected $street;
+	 
+	  /**
+      * @var string
+      */
+     protected $streeNo;
+	 
      /**
       * {@inheritDoc}
       */
@@ -106,6 +126,70 @@
      public function setWeb($text)
      {
          $this->web = $text;
+     }
+	 
+	  /**
+      * {@inheritDoc}
+      */
+     public function getProvince()
+     {
+         return $this->provinces;
+     }
+
+     /**
+      * @param string $text
+      */
+     public function setProvince($text)
+     {
+         $this->province = $text;
+     }
+	 
+	  /**
+      * {@inheritDoc}
+      */
+     public function getCity()
+     {
+         return $this->city;
+     }
+
+     /**
+      * @param string $text
+      */
+     public function setCity($text)
+     {
+         $this->city = $text;
+     }
+	 
+	  /**
+      * {@inheritDoc}
+      */
+     public function getStreet()
+     {
+         return $this->street;
+     }
+
+     /**
+      * @param string $text
+      */
+     public function setStreet($text)
+     {
+         $this->street = $text;
+     }
+	 
+	  /**
+      * {@inheritDoc}
+      */
+     public function getStreetNo()
+     {
+         return $this->streetNo;
+     }
+
+     /**
+      * @param string $text
+      */
+     public function setStreetNo($text)
+     {
+         $this->streetNo = $text;
      }
 	 
 	 

@@ -16,13 +16,6 @@ class PlacesAddSubTwoFieldset extends Fieldset
      // $this->setObject(new Places());
 	  
  
-      $this->add(array(
-         'type' => 'text',
-         'name' => 'region',
-         'options' => array(
-           'label' => 'region'
-         )
-      ));
 
         $this->add(array(
          'type' => 'text',
@@ -34,9 +27,9 @@ class PlacesAddSubTwoFieldset extends Fieldset
 	  
 	     $this->add(array(
          'type' => 'text',
-         'name' => 'comune',
+         'name' => 'city',
          'options' => array(
-           'label' => 'comune'
+           'label' => 'city'
          )
       ));
 	  

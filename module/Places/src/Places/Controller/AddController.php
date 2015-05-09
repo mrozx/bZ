@@ -71,8 +71,8 @@ namespace Places\Controller;
 				// \Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
 				    $form_session->step = 3;
-					
-					$form_session->dataArray =  array_merge($form_session->dataArray, $this->placesFormTwo->getData());;
+					$tmpArr = $form_session->dataArray;
+					$form_session->dataArray =  array_merge($tmpArr, $this->placesFormTwo->getData());;
 					
 					\Zend\Debug\Debug::dump($form_session->dataArray);die();
 				    $primaryView = new ViewModel(array(

@@ -19,6 +19,15 @@
       */
      protected $desc;
 
+	  /**
+      * @var string
+      */
+     protected $tel;
+	  /**
+      * @var string
+      */
+     protected $web;
+	 
      /**
       * {@inheritDoc}
       */

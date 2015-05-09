@@ -48,7 +48,7 @@ namespace Places\Controller;
                     'form' => $this->placesFormTwo,
 					'nextstep' => $form_session->step 
 					));
-					//\Zend\Debug\Debug::dump($form_session->dataArray);die();
+					\Zend\Debug\Debug::dump($form_session->dataArray);die();
 				   $primaryView->setTemplate('write/add');
 				   return $primaryView;
 					
@@ -92,8 +92,9 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			$form_session->step = 1;
 			$form_session->dataArray = array();
+			$obj = $form_session->obj;
 			$obj = $this->placesService->fromArray($form_session->dataArray);
-			$form_session->obj = $obj;
+			
 			
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,

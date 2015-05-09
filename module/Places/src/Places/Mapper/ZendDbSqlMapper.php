@@ -117,12 +117,8 @@
       throw new \Exception("Database error");
 	}
 	
-	 public function getName() {
-			return $this->placesPrototype->getName();
-		}
-	 
-	 public function setName($text){
-			$this->placesPrototype->setName($text);
-		}
-	 
+	// public function fromArray($array) {
+		// $this->placesPrototype
+		// }
+
  }

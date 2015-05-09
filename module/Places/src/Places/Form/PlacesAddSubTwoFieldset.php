@@ -15,25 +15,47 @@ class PlacesAddSubTwoFieldset extends Fieldset
 	  $this->setHydrator(new ClassMethods(false));
       $this->setObject(new Places());
 	  
-      $this->add(array(
-         'type' => 'hidden',
-         'name' => 'id'
-      ));
-
+ 
       $this->add(array(
          'type' => 'text',
-         'name' => 'desc',
+         'name' => 'region',
          'options' => array(
-           'label' => 'The Desc 2'
+           'label' => 'region'
          )
       ));
 
-      $this->add(array(
+        $this->add(array(
          'type' => 'text',
-         'name' => 'name',
+         'name' => 'province',
          'options' => array(
-            'label' => 'The Name 2'
+           'label' => 'province'
          )
       ));
+	  
+	     $this->add(array(
+         'type' => 'text',
+         'name' => 'comune',
+         'options' => array(
+           'label' => 'comune'
+         )
+      ));
+	  
+	     $this->add(array(
+         'type' => 'text',
+         'name' => 'street',
+         'options' => array(
+           'label' => 'street'
+         )
+      ));
+	  
+	     $this->add(array(
+         'type' => 'text',
+         'name' => 'streeNo',
+         'options' => array(
+           'label' => 'streeNo'
+         )
+      ));
+	  
+	 
    }
 }

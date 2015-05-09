@@ -20,19 +20,21 @@ class PlacesAddSubOneFieldset extends Fieldset
          'name' => 'id'
       ));
 
-      $this->add(array(
-         'type' => 'text',
-         'name' => 'desc',
-         'options' => array(
-           'label' => 'The Desc'
-         )
-      ));
+      
 
       $this->add(array(
          'type' => 'text',
          'name' => 'name',
          'options' => array(
             'label' => 'The Name'
+         )
+      ));
+	  
+	  $this->add(array(
+         'type' => 'text',
+         'name' => 'desc',
+         'options' => array(
+           'label' => 'The Desc'
          )
       ));
 	  

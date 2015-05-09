@@ -89,7 +89,7 @@ namespace Places\Controller;
 			$form_session->step = 1;
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
-			 'nextstep' => $this->formStep + 1
+			 'nextstep' => $form_session->step
 			 //'test' => $this->placesService->getName()
 			 ));
 			

@@ -2,7 +2,7 @@
 	
 namespace Places\Controller;
 
- use Places\Model\PlacesInterface;
+ //use Places\Model\PlacesInterface;
  use Places\Service\PlacesServiceInterface;
  use Places\Controller\AddoneController;
  use Zend\Form\FormInterface;
@@ -92,7 +92,8 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			$form_session->step = 1;
 			$form_session->dataArray = array();
-			$form_session->obj = new Places;
+			$obj = $this->placesService;
+			//$form_session->obj = new Places;
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
 			 'nextstep' => $form_session->step

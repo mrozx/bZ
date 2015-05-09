@@ -46,7 +46,7 @@
 	  /**
       * @var string
       */
-     protected $streeNo;
+     protected $streetNo;
 	 
      /**
       * {@inheritDoc}

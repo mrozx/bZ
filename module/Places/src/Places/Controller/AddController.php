@@ -92,7 +92,7 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			$form_session->step = 1;
 			$form_session->dataArray = array();
-			$obj = $this->placesService;
+			$obj = $this->placesService->fromArray($form_session->dataArray);
 			$form_session->obj = $obj;
 			
 			 $primaryView = new ViewModel(array(

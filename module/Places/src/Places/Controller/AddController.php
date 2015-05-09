@@ -73,10 +73,10 @@ namespace Places\Controller;
 				    $form_session->step = 3;
 								
 					$form_session->dataArray =  array_merge($form_session->dataArray, $this->placesFormTwo->getData());
-					$form_session->obj = $this->placesService->fromArray($form_session->dataArray['places-general']);
-				    $form_session->obj = $this->placesService->fromArray($form_session->dataArray['places-address']);
+					$obj = $this->placesService->fromArray($form_session->dataArray['places-general']);
+				    $obj = $this->placesService->fromArray($form_session->dataArray['places-address']);
 				  
-					\Zend\Debug\Debug::dump($form_session->obj);die();
+					\Zend\Debug\Debug::dump($obj);die();
 				    $primaryView = new ViewModel(array(
 						'form' => $this->placesFormTwo,
 						'nextstep' => $form_session->step 

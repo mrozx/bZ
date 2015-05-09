@@ -27,4 +27,5 @@
       */
 	 public function save(PlacesInterface $places);
 	
+	public function fromArray($array) ;
  }

@@ -117,8 +117,9 @@
       throw new \Exception("Database error");
 	}
 	
-	// public function fromArray($array) {
-		// $this->placesPrototype
-		// }
+	public function fromArray($array) {
+		
+		$this->hydrator->hydrate($array, $this->placesPrototype);
+		}
 
  }

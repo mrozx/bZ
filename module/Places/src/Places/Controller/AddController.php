@@ -74,7 +74,7 @@ namespace Places\Controller;
 								
 					$form_session->dataArray =  array_merge($form_session->dataArray, $this->placesFormTwo->getData());
 					$form_session->obj = $this->placesService->fromArray($form_session->dataArray['places-general']);
-				  //  $form_session->obj = $this->placesService->fromArray($form_session->dataArray['places-address']);
+				    $form_session->obj = $this->placesService->fromArray($form_session->dataArray['places-address']);
 				  
 					\Zend\Debug\Debug::dump($form_session->obj);die();
 				    $primaryView = new ViewModel(array(

@@ -71,10 +71,10 @@ namespace Places\Controller;
 				// \Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
 				    $form_session->step = 3;
-					\Zend\Debug\Debug::dump($form_session->dataArray);die();
+					
 					$form_session->dataArray =  array_merge($form_session->dataArray, $this->placesFormTwo->getData());;
 					
-					
+					\Zend\Debug\Debug::dump($form_session->dataArray);die();
 				    $primaryView = new ViewModel(array(
 						'form' => $this->placesFormTwo,
 						'nextstep' => $form_session->step 

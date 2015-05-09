@@ -119,7 +119,7 @@
 	
 	public function fromArray($array) {
 		
-		$this->hydrator->hydrate($array, $this->placesPrototype);
+		return $this->hydrator->hydrate($array, $this->placesPrototype);
 		}
 
  }

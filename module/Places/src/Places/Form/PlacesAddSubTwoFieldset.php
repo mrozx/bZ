@@ -12,8 +12,8 @@ class PlacesAddSubTwoFieldset extends Fieldset
    {
 	 parent::__construct($name, $options);
 	 
-	  $this->setHydrator(new ClassMethods(false));
-      $this->setObject(new Places());
+	 // $this->setHydrator(new ClassMethods(false));
+     // $this->setObject(new Places());
 	  
  
       $this->add(array(

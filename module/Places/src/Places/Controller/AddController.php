@@ -10,6 +10,7 @@ namespace Places\Controller;
  use Zend\Form\FormInterface;
  use Zend\Mvc\Controller\AbstractActionController;
  use Zend\View\Model\ViewModel;
+ use Zend\Session\Container;
 
  class AddController extends AbstractActionController
  {
@@ -32,18 +33,21 @@ namespace Places\Controller;
 	  public function loadformAction()
      {
 		
+		$form_session = new Container('form');
+		
+		
 		$request = $this->getRequest();
 		if ($request->isPost()) {
 	         $this->placesFormOne->setData($request->getPost());
 						 
              if ($this->placesFormOne->isValid()) {
                  try {
-				\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
+				// \Zend\Debug\Debug::dump($this->placesFormOne->getData());die();
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
-				  $this->formStep = 2;
-				  $primaryView = new ViewModel(array(
+				    $form_session->step = 15;
+				    $primaryView = new ViewModel(array(
                     'form' => $this->placesFormTwo,
-					'nextstep' => $this->formStep + 1
+					'nextstep' => $form_session->step 
 					));
 				   $primaryView->setTemplate('write/add');
 				   return $primaryView;
@@ -58,6 +62,7 @@ namespace Places\Controller;
 			// $one = new PlacesAddSubOneForm(null,null);
 			// $formOne = new AddoneController($this->placesService, $one);
 			// return $formOne->addAction();
+			$form_session->step = 1;
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
 			 'nextstep' => $this->formStep + 1

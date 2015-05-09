@@ -27,5 +27,10 @@
       */
 	 public function save(PlacesInterface $places);
 	
-	public function fromArray($array) ;
+	/**
+      * @param array $array
+      *
+      * @throws \Exception
+      */
+	 public function fromArray($array) ;
  }

@@ -48,6 +48,9 @@
          return $this->placesMapper->save($places);
      }
 	 
+	 public function fromArray($array) {
+		return $this->placesMapper->fromArray($array);
+		}
 	
 	 
  }

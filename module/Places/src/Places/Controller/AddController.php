@@ -50,6 +50,7 @@ namespace Places\Controller;
                     'form' => $this->placesFormTwo,
 					'nextstep' => $form_session->step 
 					));
+					\Zend\Debug\Debug::dump($form_session->dataArray);die();
 				   $primaryView->setTemplate('write/add');
 				   return $primaryView;
 					

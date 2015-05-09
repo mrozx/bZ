@@ -26,8 +26,5 @@
       * @throws \Exception
       */
 	 public function save(PlacesInterface $places);
-	 
-	 public function getName();
-	 
-	 public function setName($text);
+	
  }

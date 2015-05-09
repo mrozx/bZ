@@ -11,7 +11,7 @@
 		parent::__construct($name, $options);
 		
          $this->add(array(
-             'name' => 'places-fieldset',
+             'name' => 'places-address',
              'type' => 'Places\Form\PlacesAddSubTwoFieldset',
 			 'options' => array(
                  'use_as_base_fieldset' => true

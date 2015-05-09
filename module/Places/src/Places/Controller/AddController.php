@@ -29,13 +29,13 @@ namespace Places\Controller;
 		 $this->placesFormTwo = $placesFormTwo;
      }
 	 
-	  public function loadform2Action()
+	  public function loadformAction()
      {
 		
 		$request = $this->getRequest();
 		if ($request->isPost()) {
 	         $this->placesFormOne->setData($request->getPost());
-
+						 
              if ($this->placesFormOne->isValid()) {
                  try {
 				\Zend\Debug\Debug::dump($this->placesFormOne->getData());die();

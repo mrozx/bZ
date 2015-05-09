@@ -12,8 +12,8 @@ class PlacesAddSubOneFieldset extends Fieldset
    {
 	 parent::__construct($name, $options);
 	 
-	  $this->setHydrator(new ClassMethods(false));
-      $this->setObject(new Places());
+	 // $this->setHydrator(new ClassMethods(false));
+     // $this->setObject(new Places());
 	  
       $this->add(array(
          'type' => 'hidden',
@@ -33,6 +33,22 @@ class PlacesAddSubOneFieldset extends Fieldset
          'name' => 'name',
          'options' => array(
             'label' => 'The Name'
+         )
+      ));
+	  
+	  $this->add(array(
+         'type' => 'text',
+         'name' => 'tel',
+         'options' => array(
+            'label' => 'tel'
+         )
+      ));
+	  
+	  $this->add(array(
+         'type' => 'text',
+         'name' => 'web',
+         'options' => array(
+            'label' => 'web'
          )
       ));
    }

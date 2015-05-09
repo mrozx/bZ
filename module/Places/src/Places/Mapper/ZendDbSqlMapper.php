@@ -118,8 +118,8 @@
 	}
 	
 	public function fromArray($array) {
-		
-		return $this->hydrator->hydrate($array, $this->placesPrototype);
+		$obj =  $this->placesPrototype;
+		return $this->hydrator->hydrate($array, $obj);
 		}
 
  }

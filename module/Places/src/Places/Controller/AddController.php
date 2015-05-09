@@ -44,7 +44,7 @@ namespace Places\Controller;
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
 				  $form_session->dataArray =  array_merge($form_session->dataArray, $this->placesFormOne->getData());;
 				  $form_session->obj = $this->placesService->fromArray($form_session->dataArray['places-general']);
-					\Zend\Debug\Debug::dump($form_session->obj);die();
+					//\Zend\Debug\Debug::dump($form_session->obj);die();
 				    $form_session->step = 2;
 				    $primaryView = new ViewModel(array(
                     'form' => $this->placesFormTwo,
@@ -72,8 +72,10 @@ namespace Places\Controller;
                   //   $this->placesService->savePlace($this->placesFormOne->getData());
 				    $form_session->step = 3;
 					$tmpArr = $form_session->dataArray;
-					$form_session->dataArray =  array_merge($tmpArr, $this->placesFormTwo->getData());;
-					$form_session->obj = $this->placesService->fromArray($form_session->dataArray);
+								
+					$form_session->dataArray =  array_merge($form_session->dataArray, $this->placesFormTwo->getData());;
+				    $form_session->obj = $this->placesService->fromArray($form_session->dataArray['places-address']);
+				  
 					\Zend\Debug\Debug::dump($form_session->obj);die();
 				    $primaryView = new ViewModel(array(
 						'form' => $this->placesFormTwo,

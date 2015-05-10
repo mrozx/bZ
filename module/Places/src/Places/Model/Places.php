@@ -31,6 +31,11 @@
 	  /**
       * @var string
       */
+     protected $region;
+	 
+	  /**
+      * @var string
+      */
      protected $province;
 	 
 	  /**
@@ -131,9 +136,25 @@
 	  /**
       * {@inheritDoc}
       */
+     public function getRegion()
+     {
+         return $this->region;
+     }
+
+     /**
+      * @param string $text
+      */
+     public function setRegion($text)
+     {
+         $this->region = $text;
+     }
+	 
+	  /**
+      * {@inheritDoc}
+      */
      public function getProvince()
      {
-         return $this->provinces;
+         return $this->province;
      }
 
      /**

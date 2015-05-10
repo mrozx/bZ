@@ -19,10 +19,10 @@ class PlacesAddSubTwoFieldset extends Fieldset
 
         $this->add(array(
          'type' => 'Zend\Form\Element\Select',
-         'name' => 'province',
+         'name' => 'region',
          'options' => array(
-           'label' => 'province',
-		   'empty_option' => 'seleziona una provincia',
+           'label' => 'ragione',
+		   'empty_option' => 'seleziona una ragione',
 		    'value_options' => array(
                              '1' => 'Abruzzo',
                              '2' => 'Basilicata',

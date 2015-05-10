@@ -54,7 +54,7 @@ class PlacesAddSubTwoFieldset extends Fieldset
          'name' => 'province',
          'options' => array(
            'label' => 'provincia'
-         )
+         ),
 		  'attributes' => array(
            'onSelect' => "provinceSel('regione='+this.value)"
          )

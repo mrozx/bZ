@@ -50,6 +50,17 @@ class PlacesAddSubTwoFieldset extends Fieldset
       ));
 	  
 	     $this->add(array(
+         'type' => 'Zend\Form\Element\Select',
+         'name' => 'province',
+         'options' => array(
+           'label' => 'provincia'
+         )
+		  'attributes' => array(
+           'onSelect' => "provinceSel('regione='+this.value)"
+         )
+      ));
+	  
+	     $this->add(array(
          'type' => 'text',
          'name' => 'city',
          'options' => array(

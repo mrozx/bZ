@@ -18,10 +18,34 @@ class PlacesAddSubTwoFieldset extends Fieldset
  
 
         $this->add(array(
-         'type' => 'text',
+         'type' => 'Zend\Form\Element\Select',
          'name' => 'province',
          'options' => array(
-           'label' => 'province'
+           'label' => 'province',
+		   'empty_option' => 'seleziona una provincia',
+		    'value_options' => array(
+                             '1' => 'Abruzzo',
+                             '2' => 'Basilicata',
+                             '3' => 'Calabria',
+							 '4' => 'Campania',
+							 '5' => 'Emilia Romagna',
+							 '6' => 'Friuli Venezia Giulia',
+							 '7' => 'Lazio',
+							 '8' => 'Liguria',
+							 '9' => 'Lombardia',
+							 '10' => 'Marche',
+							 '11' => 'Molise',
+							 '12' => 'Piemonte',
+							 '13' => 'Puglia',
+							 '14' => 'Sardegna',
+							 '15' => 'Sicilia',
+							 '16' => 'Toscana',
+							 '17' => 'Trentino Alto Adige',
+							 '18' => 'Umbria',
+							 '19' => 'Valle d\'Aosta',
+							 '20' => 'Veneto',
+							 
+                     ),
          )
       ));
 	  

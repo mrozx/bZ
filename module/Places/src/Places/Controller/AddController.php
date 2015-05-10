@@ -29,8 +29,9 @@ namespace Places\Controller;
      }
 	 
 	  public function loadformAction()
-     {
-		$this->headScript()->appendFile('/js/insert.js');
+     {	
+		$this->getViewHelper('HeadScript')->appendFile($basePath . '/js/insert.js'); 
+		
 		$form_session = new Container('form');
 		
 		if($form_session->step == 1) {

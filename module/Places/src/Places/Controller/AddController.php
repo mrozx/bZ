@@ -30,8 +30,8 @@ namespace Places\Controller;
 	 
 	  public function loadformAction()
      {	
-		$this->getViewHelper('HeadScript')->appendFile($basePath . '/js/insert.js'); 
-		
+		$this->getViewHelper('headScript')->appendFile($basePath . '/js/insert.js'); 
+		//$this->headScript()->appendFile('/js/insert.js');
 		$form_session = new Container('form');
 		
 		if($form_session->step == 1) {

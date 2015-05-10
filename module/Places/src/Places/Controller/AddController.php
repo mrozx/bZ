@@ -30,7 +30,7 @@ namespace Places\Controller;
 	 
 	  public function loadformAction()
      {	
-		$this->getViewHelper('headScript')->appendFile($basePath . '/js/insert.js'); 
+		$this->getViewHelper('HeadScript')->appendFile($basePath . '/js/insert.js'); 
 		//$this->headScript()->appendFile('/js/insert.js');
 		$form_session = new Container('form');
 		
@@ -106,7 +106,13 @@ namespace Places\Controller;
 			
 			$primaryView->setTemplate('write/add');
 			return $primaryView;
-		}	
+		}
+
+		protected function getViewHelper($helperName)
+{
+
+			return $this->getServiceLocator()->get('viewhelpermanager')->get($helperName);
+		}
 			
  }
  

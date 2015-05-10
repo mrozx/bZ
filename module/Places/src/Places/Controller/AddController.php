@@ -96,8 +96,7 @@ namespace Places\Controller;
 			// return $formOne->addAction();
 			$form_session->step = 1;
 			$form_session->dataArray = array();
-			$form_session->obj = $this->placesService->fromArray($form_session->dataArray);
-			
+						
 			 $primaryView = new ViewModel(array(
              'form' => $this->placesFormOne,
 			 'nextstep' => $form_session->step

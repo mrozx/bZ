@@ -30,13 +30,7 @@ class PlacesAddSubOneFieldset extends Fieldset
          )
       ));
 	  
-	  $this->add(array(
-         'type' => 'text',
-         'name' => 'desc',
-         'options' => array(
-           'label' => 'The Desc'
-         )
-      ));
+	
 	  
 	  $this->add(array(
          'type' => 'text',
@@ -51,6 +45,14 @@ class PlacesAddSubOneFieldset extends Fieldset
          'name' => 'web',
          'options' => array(
             'label' => 'web'
+         )
+      ));
+	  
+	    $this->add(array(
+         'type' => 'textarea',
+         'name' => 'desc',
+         'options' => array(
+           'label' => 'The Desc'
          )
       ));
    }

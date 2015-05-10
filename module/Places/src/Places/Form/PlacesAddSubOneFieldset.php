@@ -41,7 +41,7 @@ class PlacesAddSubOneFieldset extends Fieldset
       ));
 	  
 	  $this->add(array(
-         'type' => 'text',
+         'type' => 'Zend\Form\Element\Url',
          'name' => 'web',
          'options' => array(
             'label' => 'web'

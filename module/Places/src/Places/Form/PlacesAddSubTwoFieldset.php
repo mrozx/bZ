@@ -46,6 +46,10 @@ class PlacesAddSubTwoFieldset extends Fieldset
 							 '20' => 'Veneto',
 							 
                      ),
+					 
+         ),
+		 'attributes' => array(
+           'onChange' => "provinceSel('regione='+this.value)"
          )
       ));
 	  
@@ -56,7 +60,7 @@ class PlacesAddSubTwoFieldset extends Fieldset
            'label' => 'provincia'
          ),
 		  'attributes' => array(
-           'onSelect' => "provinceSel('regione='+this.value)"
+           'onChange' => "comuneSel('provincia='+this.value)"
          )
       ));
 	  

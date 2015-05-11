@@ -11,7 +11,7 @@ function listProvinces(reg){
 	var urlform = '/add/listProvinces';
 	$.ajax({
 			async : true,
-			type: "POST",
+			method: "POST",
 			url:  urlform,
 			data: reg,
 			success: function(html)
@@ -25,7 +25,7 @@ function comuneSel(pro){
 	$.ajax({
 			
 			type: "POST",
-			url:  "insertProPhp.php",
+			method:  "insertProPhp.php",
 			data: pro,
 			success: function(html)
 			{

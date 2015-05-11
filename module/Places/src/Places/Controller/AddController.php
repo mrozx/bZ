@@ -112,7 +112,7 @@ namespace Places\Controller;
 		public function listProvinces($id)
 		{
 			//return $this->placesService->listProvinces($id);
-			return 'sdsf';
+			return '<a>sdsf</a>';
 		}
 		
 		

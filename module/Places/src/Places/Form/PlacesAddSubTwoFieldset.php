@@ -60,7 +60,7 @@ class PlacesAddSubTwoFieldset extends Fieldset
            'label' => 'provincia'
          ),
 		  'attributes' => array(
-           'onChange' => "comuneSel('provincia='+this.value)",
+           'onChange' => "comuneSel('id='+this.value)",
 		   'id' => 'provinceSel',
          )
       ));

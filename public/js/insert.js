@@ -1,6 +1,6 @@
 
 jQuery(document).ready(function(){
-	alert("shalom");
+	//alert("shalom");
 //end of document random
 })
 
@@ -12,7 +12,7 @@ function provinceSel(reg){
 			data: reg,
 			success: function(html)
 			{
-			$('#provincia').html(html);
+				$('#provincia').html(html);
 			}
 		});
 	};
@@ -25,7 +25,7 @@ function comuneSel(pro){
 			data: pro,
 			success: function(html)
 			{
-			$('#comune').html(html);
+				$('#comune').html(html);
 			}
 		});
 	};

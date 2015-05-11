@@ -27,10 +27,19 @@
       */
 	 public function save(PlacesInterface $places);
 	
-	/**
+	/** construct a Places object from an array received from form
       * @param array $array
       *
       * @throws \Exception
       */
 	 public function fromArray($array) ;
+	
+	/** gen an array of provinces based on region id
+      * @param integer $id
+      * @return array
+      * @throws \Exception
+      */
+	 public function listProvinces($id) ;
+	 
+	 
  }

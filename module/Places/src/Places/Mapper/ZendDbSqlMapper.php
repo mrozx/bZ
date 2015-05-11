@@ -54,7 +54,7 @@
      public function find($id)
      {
      }
-
+	
      /**
       * @return array|PlacesInterface[]
       */
@@ -117,9 +117,30 @@
       throw new \Exception("Database error");
 	}
 	
+	// get a Places object from form array input
 	public function fromArray($array) {
 		$obj =  $this->placesPrototype;
 		return $this->hydrator->hydrate($array, $obj);
 		}
+		
+	// get list of provinces based on region id
+	 public function listProvinces($id) {
+			$sql    = new Sql($this->dbAdapter);
+			$select = $sql->select();
+			$select->from('province');
+			$select->where(array('regionId' => $id));
+			$stmt   = $sql->prepareStatementForSqlObject($select);
+         
+			 $result = $stmt->execute();
 
+			 if ($result instanceof ResultInterface && $result->isQueryResult()) {
+				 $resultSet = new ResultSet;
+				 
+				  //\Zend\Debug\Debug::dump($resultSet->initialize($result));die();
+				return $resultSet->initialize($result);
+			 }
+		
+			die("no data");
+		}
+	 
  }

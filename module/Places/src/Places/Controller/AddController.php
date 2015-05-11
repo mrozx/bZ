@@ -30,8 +30,9 @@ namespace Places\Controller;
 	 
 	  public function loadformAction()
      {	
+		// getViewHelper is defined bellow as a protected function
 		$this->getViewHelper('HeadScript')->appendFile('/js/insert.js'); 
-		//$this->headScript()->appendFile('/js/insert.js');
+		
 		$form_session = new Container('form');
 		
 		if($form_session->step == 1) {
@@ -109,8 +110,7 @@ namespace Places\Controller;
 		}
 
 		protected function getViewHelper($helperName)
-{
-
+		{
 			return $this->getServiceLocator()->get('viewhelpermanager')->get($helperName);
 		}
 			

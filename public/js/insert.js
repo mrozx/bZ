@@ -8,11 +8,11 @@ function listProvinces(reg){
 	$.ajax({
 			
 			type: "POST",
-			url:  "AddController.php",
+			url:  "AddController/listProvinces",
 			data: reg,
 			success: function(html)
 			{
-				$('#provincia').html(html);
+				$('.container').html(html);
 			}
 		});
 	};

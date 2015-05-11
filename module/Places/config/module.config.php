@@ -65,7 +65,7 @@ return array(
                  'child_routes'  => array(
                      		 
 				 'add' => array(
-                         'type' => 'literal',
+                         'type' => 'segment',
                          'options' => array(
                              'route'    => 'add[/:step]',
                              'defaults' => array(

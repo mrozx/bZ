@@ -74,9 +74,25 @@ return array(
 								),
 							 'constraints' => array(
 								 'step' => '[1-9]\d*'
-                         )
 							)
+						),
+						'child_routes'  => array(
+                     		 
+						'listProvices' => array(
+							'type' => 'literal',
+							'options' => array(
+								 'route'    => '/',
+								 'defaults' => array(
+									 'controller' => 'Places\Controller\Add',
+									 'action'     => 'listProvices'
+									),
+								 
+						),
 					),
+				 
+				),
+					),
+				 
 				),
 			),
 		),

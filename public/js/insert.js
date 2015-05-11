@@ -10,7 +10,7 @@ function listProvinces(reg){
         };
 	var urlform = '/add/listProvinces';
 	$.ajax({
-			
+			async : true,,
 			type: "POST",
 			url:  urlform,
 			data: reg,

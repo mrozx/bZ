@@ -9,7 +9,7 @@ function listProvinces(reg){
 	$.ajax({
 			
 			type: "POST",
-			url:  "/Add/listProvinces",
+			url:  urlform,
 			data: reg,
 			success: function(html)
 			{

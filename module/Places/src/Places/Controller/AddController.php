@@ -113,6 +113,14 @@ namespace Places\Controller;
 		{
 			//return $this->placesService->listProvinces($id);
 			return '<a>sdsf</a>';
+			$request   = $this->getRequest();
+			$viewModel = new ViewModel();
+			$viewModel->setTemplate('module/controller/action');
+			$viewModel->setTerminal($request->isXmlHttpRequest());
+
+			return $viewModel->setVariables(array(
+				 //list of vars
+			));
 		}
 		
 		

@@ -14,7 +14,7 @@ function listProvinces(reg){
 			method: "POST",
 			url:  urlform,
 			data: reg,
-			dataType: html,
+			dataType: 'html',
 			success: function(html)
 			{
 				$('#provinceSel').html(html);

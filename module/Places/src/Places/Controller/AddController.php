@@ -115,7 +115,7 @@ namespace Places\Controller;
 			return '<a>sdsf</a>';
 			$request   = $this->getRequest();
 			$viewModel = new ViewModel();
-			$viewModel->setTemplate('module/controller/action');
+			//$viewModel->setTemplate('module/controller/action');
 			$viewModel->setTerminal($request->isXmlHttpRequest());
 
 			return $viewModel->setVariables(array(

@@ -5,6 +5,7 @@ jQuery(document).ready(function(){
 })
 
 function listProvinces(reg){
+	var urlform = '<?php echo $this->url('Places\src\Places\Controller', array('controller'=>'Add', 'action'=>'ajax')); ?>';
 	$.ajax({
 			
 			type: "POST",

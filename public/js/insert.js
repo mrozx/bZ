@@ -8,7 +8,7 @@ function listProvinces(reg){
 	$.ajax({
 			
 			type: "POST",
-			url:  "/AddController/listProvinces",
+			url:  "/Add/listProvinces",
 			data: reg,
 			success: function(html)
 			{

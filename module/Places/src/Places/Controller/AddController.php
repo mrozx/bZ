@@ -116,7 +116,7 @@ namespace Places\Controller;
 			$request   = $this->getRequest();
 			$viewModel = new ViewModel();
 			//$viewModel->setTemplate('module/controller/action');
-			$viewModel->setTerminal($request->isXmlHttpRequest());
+			$viewModel->setTerminal(true);
 
 			return $viewModel->setVariables(array(
 				 //list of vars

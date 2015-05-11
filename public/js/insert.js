@@ -16,7 +16,7 @@ function listProvinces(reg){
 			data: reg,
 			success: function(html)
 			{
-				$('.container').html(html);
+				$('#provinceSel').html(html);
 			}
 		});
 	};

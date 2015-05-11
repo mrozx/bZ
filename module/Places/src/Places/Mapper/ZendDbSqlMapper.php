@@ -136,7 +136,7 @@
 			 if ($result instanceof ResultInterface && $result->isQueryResult()) {
 				 $resultSet = new ResultSet;
 				 $resultSet->initialize($result);
-				  //\Zend\Debug\Debug::dump($resultSet->initialize($result));die();
+				  \Zend\Debug\Debug::dump($resultSet->initialize($result));die();
 				return toArray($resultSet);
 			 }
 		

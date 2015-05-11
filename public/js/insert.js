@@ -12,7 +12,7 @@ function listProvinces(reg){
 	$.ajax({
 			
 			type: "POST",
-			url:  CMSObj,
+			url:  CMSObj::APP_PATH,
 			data: reg,
 			success: function(html)
 			{

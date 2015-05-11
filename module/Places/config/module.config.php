@@ -73,7 +73,7 @@ return array(
                                  'action'     => 'loadform'
 								),
 							 'constraints' => array(
-								 'step' => '[1-9]\d*'
+								// 'step' => '[1-9]\d*'
                          )
 							)
 					),

@@ -74,39 +74,20 @@ return array(
 								),
 							 'constraints' => array(
 								 'step' => '[1-9]\d*'
+                         )
 							)
-						),
-						'child_routes'  => array(
-                     		 
-						'listProvices' => array(
-							'type' => 'literal',
-							'options' => array(
-								 'route'    => '/',
-								 'defaults' => array(
-									 'controller' => 'Places\Controller\Add',
-									 'action'     => 'listProvices'
-									),
-								 
-						),
-						),
-						),
 					),
-				 
-				
-					),
-				 
 				),
 			),
 		),
-	
-	
+	),
      'view_manager' => array(
          'template_path_stack' => array(
 			__DIR__ . '/../view/places',
          ),
 		 'strategies' => array(
         'ViewJsonStrategy',
-    ),
+		),
      ),
 	 
 	  

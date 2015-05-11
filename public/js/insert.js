@@ -5,11 +5,14 @@ jQuery(document).ready(function(){
 })
 
 function listProvinces(reg){
+	var CMSObj = {
+            "APP_PATH":"<?php echo $this->serverUrl() . $this->basePath() ?>/Add/listProvinces"
+        };
 	var urlform = '\\Add\\listProvinces';
 	$.ajax({
 			
 			type: "POST",
-			url:  urlform,
+			url:  CMSObj,
 			data: reg,
 			success: function(html)
 			{

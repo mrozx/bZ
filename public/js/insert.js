@@ -8,7 +8,7 @@ function listProvinces(reg){
 	var CMSObj = {
             "APP_PATH":"<?php echo $this->serverUrl() . $this->basePath() ?>/Add/listProvinces"
         };
-	var urlform = 'listProvinces';
+	var urlform = '//add//listProvinces';
 	$.ajax({
 			
 			type: "POST",

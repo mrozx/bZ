@@ -49,7 +49,7 @@ class PlacesAddSubTwoFieldset extends Fieldset
 					 
          ),
 		 'attributes' => array(
-           'onChange' => "provinceSel('regione='+this.value)"
+           'onChange' => "listProvinces('id='+this.value)"
          )
       ));
 	  

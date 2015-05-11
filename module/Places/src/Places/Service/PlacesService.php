@@ -52,5 +52,9 @@
 		return $this->placesMapper->fromArray($array);
 		}
 	
+	public function listProvinces($id) {
+		return $this->placesMapper->listProvinces($id);
+		}
+	
 	 
  }

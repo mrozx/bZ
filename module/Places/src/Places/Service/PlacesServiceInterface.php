@@ -33,5 +33,7 @@
 	 public function savePlace(PlacesInterface $places);
 	 
 	 public function fromArray($array); 
+	 
+	 public function listProvinces($id);
  }
  

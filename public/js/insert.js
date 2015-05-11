@@ -4,11 +4,11 @@ jQuery(document).ready(function(){
 //end of document random
 })
 
-function provinceSel(reg){
+function listProvinces(reg){
 	$.ajax({
 			
 			type: "POST",
-			url:  "insertRegPhp.php",
+			url:  "AddController.php",
 			data: reg,
 			success: function(html)
 			{

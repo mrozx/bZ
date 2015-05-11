@@ -109,11 +109,18 @@ namespace Places\Controller;
 			return $primaryView;
 		}
 
+		public function listProvinces($id)
+		{
+			return $this->placesService->listProvinces($id);
+		}
+		
+		
 		protected function getViewHelper($helperName)
 		{
 			return $this->getServiceLocator()->get('viewhelpermanager')->get($helperName);
 		}
-			
+		
+		
  }
  
 ?>

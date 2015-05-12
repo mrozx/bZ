@@ -1,6 +1,6 @@
 
 jQuery(document).ready(function(){
-	//alert("shalom");
+	alert("shalom");
 //end of document random
 })
 
